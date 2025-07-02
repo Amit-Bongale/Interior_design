@@ -1,0 +1,33 @@
+
+body{
+    background-color: #f0f0f0;
+    font-family: 'Tex' , sans-serif;
+}
+
+@font-face {
+  font-family: 'Tex';
+  src: url('Assets/Fonts/texgyreadventor-bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('Assets/Fonts/Jost-VariableFont_wght.ttf') format('truetype');
+}
+
+.jost {
+    font-family: 'Jost', sans-serif;
+}
+
+.tex {
+    font-family: 'Tex', sans-serif;
+}
+
+
+/* .navbarstyle {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: 1px solid #ffffff;
+    backdrop-filter: blur(10px);
+} */

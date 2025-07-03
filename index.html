@@ -6,13 +6,14 @@
     <title>Home</title>
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
     <link rel="stylesheet" href="style.css">
 
 </head>
-<body>
-    <nav class="flex justify-around items-center border-b text-white p-8 absolute top-0 w-full bg-transparent border-white backdrop-blur-md">
-        <div class="text-3xl font-bold tex tracking-wider"> RENEVETE</div>
+<body class="bg-white">
+    <nav class="flex justify-around items-center border-b text-white absolute top-0 w-full bg-transparent border-white backdrop-blur-md z-3">
+        <div class="text-3xl font-bold tex tracking-wider border-r p-6"> RENEVETE</div>
         <div class="flex space-x-6 list-none text-lg font-medium jost">
             <li>Home</li>
             <li>About us</li>
@@ -24,8 +25,240 @@
     </nav>
 
     <!-- Hero -->
-    <section>
-        <img src="/Assets/Images/bright-living-room-decorating-with-rattan-furniture.jpg" alt="hero" class="w-full h-170 object-cover">
+    <section class="w-full bg-black overflow-hidden">
+        <swiper-container slides-per-view="1" speed="500" loop="true" class="overflow-hidden" autoplay="true" autoplay-delay="3000" autoplay-disable-on-interaction="false"effect="fade" > 
+            <swiper-slide class="p-2">
+                <div class="absolute top-50 left-100 text-white w-190 z-3">
+                    <h1 class="text-8xl">Discover the Art of Living</h1>
+                    <h4 class="relative text-xl top-20 w-150 jost" > interior design aims to create spaces that not only look visually appealing but also enhance the well-being and quality of life.</h4>
+                </div>
+                <img src="/Assets/Images/bright-living-room-decorating-with-rattan-furniture.jpg" alt="hero" class="w-[100vw] overflow-hidden h-194 object-cover imgeanimate">
+            </swiper-slide>
+            <swiper-slide class="p-2">
+                <div class="absolute top-50 left-100 text-white w-190 z-3">
+                    <h1 class="text-8xl">Creating Harmony Through Design</h1>
+                    <h4 class="relative text-xl top-20 w-150 jost" > nterior design encompasses various aspects, including selecting and arranging furniture, choosing color schemes.</h4>
+                </div>
+                <img src="/Assets/Images/composition-living-room-interior-with-copy-spaceplants-cacti-boho-accessories-template.jpg" alt="hero" class="w-[100vw] overflow-hidden h-194 object-cover  imgeanimate">
+            </swiper-slide>
+            <swiper-slide class="p-2">
+                <div class="absolute top-50 left-100 text-white w-190 z-3">
+                    <h1 class="text-8xl">Where Style Meets Comfort</h1>
+                    <h4 class="relative text-xl top-20 w-150 jost" > nterior design encompasses various aspects, including selecting and arranging furniture, choosing color schemes.</h4>
+                </div>
+                <img src="/Assets/Images/stylish-compositon-modern-living-room-interior-with-frotte-armchair-sofa-plants-painting-wooden-commode-side-table-elegant-home-accessories-template-copy-spacexa.jpg" alt="hero" class="w-[100vw] overflow-hidden h-194 object-cover  imgeanimate">
+            </swiper-slide>
+        </swiper-container>
     </section>
+
+    <section class="w-full bg-white overflow-hidden p-26">
+        <h2 class="text-[140px]/35 w-250 top-20 border-b border-gray-300 p-8"> Elevate Your Interiors</h2>
+        <div class="flex justify-around items-center text-2xl">
+            <h2 class="p-6 ">Designing Interiors That Leave a Lasting Impression</h2>
+            <button class="border-b p-2 hover:border-0 hover:cursor-pointer"> All Services</button>
+        </div>
+        <div class="grid grid-cols-3 gap-4 gap-x-18 text-lg font-medium jost p-6 float-end mt-6 ">
+            <span>Consultation</span>
+            <span>Space Planning</span>
+            <span>Concept Development </span>
+            <span> Design Development</span>
+            <span>3D Visualization</span>
+            <span> Project Management</span>
+            <span>Furniture Selection and Procurement</span>
+            <span>Lighting Design</span>
+            <span>Custom Design Elements</span>
+        </div>
+        <div class="flex items-center text-2xl mt-50">
+            <div class="m-6">
+                <h2 class="text-[125px] jost border-b border-gray-300 w-100">64</h2>
+                <h3 class="p-4">Clients Around the World</h3>
+            </div>
+            <div class="m-6">
+                <h2 class="text-[125px] jost border-b border-gray-300 w-100">124</h2>
+                <h3 class="p-4">Projects Completed</h3>
+            </div>
+            <div class="m-6">
+                <h2 class="text-[125px] jost border-b border-gray-300 w-100">224K</h2>
+                <h3 class="p-4">Square Feet</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-full overflow-hidden h-100">
+        <div class="flex w-full text-6xl gap-20 justify-center items-center p-6 mt-32 text-nowrap scrolltext text-white uppercase">
+            <h2> Modern Structures</h2>
+            <h2>Thinking outside of the box</h2>
+            <h2>Decoration</h2>
+            <h2> Modern Structures</h2>
+            <h2>Thinking outside of the box</h2>
+            <h2>Decoration</h2>
+        </div>
+        <img src="Assets/Images/composition-living-room-interior-with-copy-spaceplants-cacti-boho-accessories-template.jpg" alt="interior" srcset="" class="w-full h-194 object-cover fixed bottom-0 z-[-2] ">
+    </section>
+
+    <section class="w-full bg-white overflow-hidden  p-26">
+        <button class="border-b p-2 float-end font-semibold text-xl jost"> About Us</button>
+        <h2 class="text-[120px]/35 w-350 top-20 border-b border-gray-300 p-8"> About Our Design Philosophy</h2>
+        <div class="jost text-3xl font-medium mt-5">
+            <h2 class="p-6 ">Your Vision, Our Design Expertise</h2>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 gap-x-18 text-lg font-medium jost p-10 float-end mt-6">
+            <div class="relative">
+                <swiper-container  loop="true" effect="cards" grabCursor="true" autoplay="true" autoplay-delay="3000" autoplay-disable-on-interaction="false"> 
+                    <swiper-slide class="p-2 bg-transparent shadow-none">
+                        <img src="/Assets/Images/festive-christmas-modern-kitchen-with-big-tree-1300x1280.jpg" alt="" class="h-125 ">
+                    </swiper-slide>
+                    <swiper-slide class="p-2">
+                        <img src="/Assets/Images/living-room-with-design-chaise-longue-painting-rattan-decoration-wooden-cube-carpet-elegant-personal-accessories-1-1300x1280.jpg" alt="" class="h-125">
+                    </swiper-slide>
+                    <swiper-slide class="p-2">
+                        <img src="/Assets/Images/stylish-boho-vintage-dining-room-interior-with-poster-mock-up-round-table-with-rattan-chair-vase-with-dried-flowers-brown-wall-rattan-lamp-mock-up-poster-template-1300x1300.jpg" alt="" class="h-125 ">
+                    </swiper-slide>
+                </swiper-container> 
+            </div>
+            <div>
+                <div class="flex gap-20 p-4">
+                <div class ="text-2xl jost">
+                    <h2 class="border-b mb-4">History</h2>
+                    <h2 class="border-b mb-4">Description</h2>
+                    <h2 class="border-b mb-4">Reviews</h2>
+                </div>
+                <div class="text-xl/9 font-normal jost text-gray-600">
+                    Renovatio, we believe that every space has the potential to be transformed into a work of art. With a passion for design and a commitment to excellence, we strive to create captivating interiors that reflect the unique personalities and aspirations of our clients.Our team of talented designers, architects, and craftsmen collaborates closely with each client to understand their vision and bring it to life.
+                </div>
+            </div>
+
+            <div>
+                <div class="flex justify-between p-4 border-b">
+                    <h3>Space Planning and Layout</h3>
+                    <h3>95%</h3>
+                </div>
+                <div class="flex justify-between p-4 border-b">
+                    <h3>Project Challenges and Solutions</h3>
+                    <h3>85%</h3>
+                </div>
+                <div class="flex justify-between p-4 border-b">
+                    <h3>Sustainability and Eco-Friendly Features</h3>
+                    <h3>95%</h3>
+                </div>
+            </div>
+
+        </div>
+            
+    </section>
+    
+    <section class="w-full bg-white p-4 pb-12">
+        <swiper-container slides-per-view="2" speed="500" loop="true" navigation="true" autoplay="true" autoplay-delay="3000"> 
+            <swiper-slide class="p-2">
+                <img src="/Assets/Images/room-interior-design.jpg" alt="">
+            </swiper-slide>
+            <swiper-slide class="p-2">
+                <img src="/Assets/Images/stylish-dining-room-with-round-table-rattan-chair-wooden-commode-poster-kitchen-accessories-beige-wall-with-mock-up-poster-home-decor-template.jpg" alt="" srcset="" class="">
+            </swiper-slide>
+            <swiper-slide class="p-2" >
+                <img src="/Assets/Images/stylish-composition-cozy-living-room-interior-with-copy-space-lot-plants-cacti-wooden-cubes-sofa-accessories-beige-wall-carpet-floor-plants-love-concept-template.jpg" alt="" class="" srcset="">
+            </swiper-slide>
+            <swiper-slide class="p-2" >
+                <img src="/Assets/Images/stylish-composition-living-room-interior-with-beige-sofa-pillow-plaid-coffee-table-rattan-commode-personal-accessories-beige-wall-mock-up-poster-template.jpg" alt="" srcset="" class="">
+            </swiper-slide>
+            <swiper-slide class="p-2" >
+                <img src="/Assets/Images/stylish-compositon-modern-living-room-interior-with-frotte-armchair-sofa-plants-painting-wooden-commode-side-table-elegant-home-accessories-template-copy-spacexa.jpg" alt="" class="" srcset="">
+            </swiper-slide>
+            <swiper-slide class="p-2" >
+                <img src="/Assets/Images/stylish-dining-room-with-round-table-rattan-chair-wooden-commode-poster-kitchen-accessories-beige-wall-with-mock-up-poster-home-decor-template (1).jpg" alt="" srcset="" class="">
+            </swiper-slide>
+        </swiper-container>
+    </section>
+
+    <section class="w-full grid grid-cols-4 gap-4 gap-x-14 bg-white p-16">
+        <div class="flex-column justify-center item-center">
+            <img src="/Assets/Icons/interpersonal-relationship.png" alt="consultation" class="h-40 w-40 p-4 ml-10">
+            <div>
+                <h2 class="text-2xl p-2">Initial Consultation</h2>
+                <h2 class="text-gray-800 jost text-lg p-2">The process begins with an initial consultation where a representative from Inspired Interiors meets with the client to discuss their project requirements, goals, and vision.</h2>
+            </div>
+        </div>
+        <div>
+            <img src="/Assets/Icons/data-analysis.png" alt="assessment" class="h-40 w-40 p-4 ml-10">
+            <div>
+                <h2 class="text-2xl p-2">Project Assessment and Space Analysis</h2>
+                <h2 class="text-gray-800 jost text-lg p-2">The design team conducts a thorough assessment of the space, taking measurements, photographs, and gathering any relevant architectural drawings or floor plans.</h2>
+            </div>
+        </div>
+        <div>
+            <img src="/Assets/Icons/blueprint.png" alt="desing" class="h-40 w-40 p-4 ml-10">
+            <div>
+                <h2 class="text-2xl p-2">Design Concept Development</h2>
+                <h2 class="text-gray-800 jost text-lg p-2">Based on the client's preferences and the information gathered during the assessment, Inspired Interiors develops a design concept.</h2>
+            </div>
+        </div>
+        <div class="flex-column justify-center item-center">
+            <img src="/Assets/Icons/design-process.png" alt="presentation" class="h-40 w-40 p-4 ml-10">
+            <div>
+                <h2 class="text-2xl p-2">Design Presentation and Approval</h2>
+                <h2 class="text-gray-800 jost text-lg p-2">Inspired Interiors presents the design concept and space plans to the client, utilizing visual aids such as 3D renderings, sketches, and material samples.</h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-full bg-white overflow-hidden p-26 pb-5 pt-1">
+        <button class="border-b p-2 hover:border-0 hover:cursor-pointer float-end"> Latest News</button>
+        <h2 class="text-[120px]/35 w-350 top-20 border-b border-gray-300 p-8"> Latest News</h2>
+        <div class="flex justify-between items-center text-2xl">
+            <h2 class="p-6 text-3xl ">Discover the Latest in Interior Design</h2>
+        </div>
+    </section>
+
+    <section class="w-full bg-white overflow-hidden p-16 pt-2 overflow-hidden">
+        <swiper-container slides-per-view="3" speed="500" loop="true"  navigation="true" class="" autoplay="true" autoplay-delay="3000" autoplay-disable-on-interaction="false"> 
+            <swiper-slide class="p-2">
+                <img src="/Assets/Images/room-interior-design.jpg" alt="" lazy="true">
+                <div>
+                    <h2 class="jost p-2">May 18,2023 / News</h2>
+                    <h2 class="text-2xl pt-0 p-2">Biophilic Design: Connecting Nature and Interiors for Well-being</h2>
+                </div>
+            </swiper-slide>
+            <swiper-slide class="p-2" >
+                <img src="/Assets/Images/stylish-dining-room-with-round-table-rattan-chair-wooden-commode-poster-kitchen-accessories-beige-wall-with-mock-up-poster-home-decor-template.jpg" alt="" srcset="" class="" lazy="true">
+                <div>
+                    <h2 class="jost p-2">May 18,2023 / News</h2>
+                    <h2 class="text-2xl pt-0 p-2">Open Concept Living: Embracing Airy Interior Layouts</h2>
+                </div>
+            </swiper-slide>
+            <swiper-slide class="p-2" >
+                <img src="/Assets/Images/stylish-composition-cozy-living-room-interior-with-copy-space-lot-plants-cacti-wooden-cubes-sofa-accessories-beige-wall-carpet-floor-plants-love-concept-template.jpg" alt="" class="" srcset="" lazy="true">
+                <div>
+                    <h2 class="jost p-2">May 18,2023 / News</h2>
+                    <h2 class="text-2xl pt-0 p-2">Artistic Expressions: Incorporating Art into Interior Design </h2>
+                </div>
+            </swiper-slide>
+            <swiper-slide class="p-2" >
+                <img src="/Assets/Images/stylish-composition-living-room-interior-with-beige-sofa-pillow-plaid-coffee-table-rattan-commode-personal-accessories-beige-wall-mock-up-poster-template.jpg" alt="" srcset="" class="" lazy="true">
+                <div>
+                    <h2 class="jost p-2">May 18,2023 / News</h2>
+                    <h2 class="text-2xl pt-0 p-2">Multifunctional Furniture: Space-Saving Solutions for Compact Homes </h2>
+                </div>
+            </swiper-slide>
+            <swiper-slide class="p-2" >
+                <img src="/Assets/Images/stylish-compositon-modern-living-room-interior-with-frotte-armchair-sofa-plants-painting-wooden-commode-side-table-elegant-home-accessories-template-copy-spacexa.jpg" alt="" class="" srcset="" lazy="true">
+                <div>
+                    <h2 class="jost p-2">May 18,2023 / News</h2>
+                    <h2 class="text-2xl pt-0 p-2">Artistic Expressions: Incorporating Art into Interior Design</h2>
+                </div>
+            </swiper-slide>
+            <swiper-slide class="p-2" >
+                <img src="/Assets/Images/stylish-dining-room-with-round-table-rattan-chair-wooden-commode-poster-kitchen-accessories-beige-wall-with-mock-up-poster-home-decor-template (1).jpg" alt="" srcset="" class="" lazy="true">
+                <div>
+                    <h2 class="jost p-2">May 18,2023 / News</h2>
+                    <h2 class="text-2xl pt-0 p-2">Emerging Trends: Exploring the Latest in Interior Design </h2>
+                </div>
+            </swiper-slide>
+        </swiper-container>
+    </section>
+    
+
+
+
 </body>
 </html>

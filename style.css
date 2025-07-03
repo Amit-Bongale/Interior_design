@@ -1,7 +1,8 @@
 
 body{
-    background-color: #f0f0f0;
-    font-family: 'Tex' , sans-serif;
+  background-color: #ffffff;
+  font-family: 'Tex' , sans-serif;
+  color: #073842;
 }
 
 @font-face {
@@ -19,15 +20,42 @@ body{
 }
 
 .tex {
-    font-family: 'Tex', sans-serif;
+  font-family: 'Tex', sans-serif;
+}
+
+.imgeanimate {
+  scale: 1.1;
+  animation: image 8s linear infinite;
+  filter: brightness(0.7);
+}
+
+@keyframes image {
+  to{
+    scale : 1.2;
+    transform: translateY(-10px);
+    transform: translateX(50px);
+  }
+}
+
+.scrolltext{
+  animation: scroll 18s linear infinite;
 }
 
 
-/* .navbarstyle {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0);
-    border-bottom: 1px solid #ffffff;
-    backdrop-filter: blur(10px);
-} */
+@keyframes scroll {
+  from{
+    transform: translateX(0px);
+  }
+  to{ 
+    transform: translateX(-800px);
+  }
+}
+
+.swiper-slide {
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.swiper-slide-shadow {
+  display: none !important;
+}

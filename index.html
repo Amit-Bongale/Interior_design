@@ -8,15 +8,19 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 
 </head>
-<body class="bg-white">
-    <nav class="flex justify-around items-center border-b text-white absolute top-0 w-full bg-transparent border-white backdrop-blur-md z-3">
+<body class="bg-white ">
+
+    <nav class="flex justify-around items-center border-b text-white absolute top-0 w-full bg-transparent border-white backdrop-blur-md z-4">
         <div class="text-3xl font-bold tex tracking-wider border-r p-6"> RENEVETE</div>
         <div class="flex space-x-6 list-none text-lg font-medium jost">
-            <li>Home</li>
-            <li>About us</li>
+            <li> <a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About us</a></li>
             <li>Services</li>
             <li>Project</li>
             <li>News</li>
@@ -26,7 +30,17 @@
 
     <!-- Hero -->
     <section class="w-full bg-black overflow-hidden">
-        <swiper-container slides-per-view="1" speed="500" loop="true" class="overflow-hidden" autoplay="true" autoplay-delay="3000" autoplay-disable-on-interaction="false"effect="fade" > 
+
+        <div class="absolute bottom-20 right-20 z-50 gap-4 flex">
+            <button class="m-1 hover:cursor-pointer" id="forword-btn">
+                <img src="/Assets/Icons/arrow-left.png" alt="" srcset="" class="w-15 invert">
+            </button>
+            <button class="m-1 hover:cursor-pointer" id="backword-btn">
+                <img src="/Assets/Icons/arrow-right.png" alt="" class="w-15 invert">
+            </button>
+        </div>
+
+        <swiper-container slides-per-view="1" speed="500" loop="true" class="overflow-hidden" autoplay="true" autoplay-delay="3000" autoplay-disable-on-interaction="false" effect="fade" id="hero"> 
             <swiper-slide class="p-2">
                 <div class="absolute top-50 left-100 text-white w-190 z-3">
                     <h1 class="text-8xl">Discover the Art of Living</h1>
@@ -35,7 +49,7 @@
                 <img src="/Assets/Images/bright-living-room-decorating-with-rattan-furniture.jpg" alt="hero" class="w-[100vw] overflow-hidden h-194 object-cover imgeanimate">
             </swiper-slide>
             <swiper-slide class="p-2">
-                <div class="absolute top-50 left-100 text-white w-190 z-3">
+                <div class="absolute top-50 left-100 text-white w-300 z-3">
                     <h1 class="text-8xl">Creating Harmony Through Design</h1>
                     <h4 class="relative text-xl top-20 w-150 jost" > nterior design encompasses various aspects, including selecting and arranging furniture, choosing color schemes.</h4>
                 </div>
@@ -52,15 +66,15 @@
     </section>
 
     <section class="w-full bg-white overflow-hidden p-26">
-        <h2 class="text-[140px]/35 w-250 top-20 border-b border-gray-300 p-8"> Elevate Your Interiors</h2>
-        <div class="flex justify-around items-center text-2xl">
-            <h2 class="p-6 ">Designing Interiors That Leave a Lasting Impression</h2>
+        <h2 class="text-[140px]/35 w-250 top-20 border-b border-gray-300 p-8" data-aos="fade-left"> Elevate Your Interiors</h2>
+        <div class="flex justify-between items-center text-2xl" data-aos="fade-up">
+            <h2 class="p-6">Designing Interiors That Leave a Lasting Impression</h2>
             <button class="p-2 hover:cursor-pointer flex button">
                 <span class="border-b p-1 transition-all duration-300"> All Services</span>  
                 <img src="/Assets/Icons/right-up.png" alt="arrow" srcset="" class="w-10 h-10 p-1  transition-all duration-300">
             </button>
         </div>
-        <div class="grid grid-cols-3 gap-4 gap-x-18 text-lg font-medium jost p-6 float-end mt-6 ">
+        <div class="grid grid-cols-3 gap-4 gap-x-18 text-lg font-medium jost p-6 float-end mt-6" data-aos="fade-up" data-aos-anchor-placement="center" data-aos-delay="100" >
             <span>Consultation</span>
             <span>Space Planning</span>
             <span>Concept Development </span>
@@ -110,7 +124,7 @@
         </div>
 
         <div class="grid grid-cols-2 gap-4 gap-x-18 text-lg font-medium jost p-10 float-end mt-6">
-            <div class="relative">
+            <div class="relative overflow-hidden p-2">
                 <swiper-container  loop="true" effect="cards" grabCursor="true" autoplay="true" autoplay-delay="3000" autoplay-disable-on-interaction="false"> 
                     <swiper-slide class="p-2 bg-transparent shadow-none">
                         <img src="/Assets/Images/festive-christmas-modern-kitchen-with-big-tree-1300x1280.jpg" alt="" class="h-125 ">
@@ -325,23 +339,29 @@
         <div>
             <h2 class="text-2xl p-4">New york Office</h2>
             <h4 class="pl-4 p-1 text-lg jost">555-1234</h4>
-            <h4 class="pl-4 jost text-lg">info@renovatio .com</h4>
+            <h4 class="pl-4 jost text-lg">info@renovatio.com</h4>
         </div>
         <div>
             <h2 class="text-2xl p-4">Paris Office</h2>
             <h4 class="pl-4 p-1 text-lg jost">+33 1 23 45 67 89</h4>
-            <h4 class="pl-4 jost text-lg">info@renovatio .com</h4>
+            <h4 class="pl-4 jost text-lg">info@renovatio.com</h4>
         </div>
         <div>
             <h2 class="text-2xl p-4">Berlin Office</h2>
             <h4 class="pl-4 p-1 text-lg jost">+49 30 12345678</h4>
-            <h4 class="pl-4 jost text-lg">info@renovatio .com</h4>
+            <h4 class="pl-4 jost text-lg">info@renovatio.com</h4>
         </div>
     </section>
 
     <section class="bg-white w-full text-center p-8 jost">
        ©2025 Amit Inc. - Bengaluru
     </section>
+
+    <script src="/js/Swiper.js"></script>
+    <script> AOS.init({
+        duration: 500,
+        easing: 'ease-in-sine',0
+    }); </script>
 
 </body>
 </html>

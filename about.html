@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -31,7 +32,28 @@
         />
       </section>
 
-      <section>
+
+      <section class="flex flex-col  justify-center item-center">
+        <div class="flex flex-col space-y-4">
+          <h1 class="text-8xl text-teal-950 border-b p-4 ">About Us </h1>
+          <h3 class="text-4xl text-teal-800 jost">Where Imagination Meets Interiors</h3>
+        </div>
+
+        
+        <swiper-container loop="true" effect="cards" grabCursor="true" >
+          <swiper-slide class="p-2"><img src="/Assets/aboutpage/aboutgrid/aboutgrid1.jpg" alt="" class=""></swiper-slide>
+          <swiper-slide class="p-2"><img src="/Assets/aboutpage/aboutgrid/aboutgrid2.jpg" alt="" class=" "></swiper-slide>
+          <swiper-slide class="p-2"><img src="/Assets/aboutpage/aboutgrid/aboutgrid3.jpg" alt="" class=""></swiper-slide>
+          
+        </swiper-container> 
+        
+
+      </section>
+
+
+
+
+      <!-- <section>
         <div
           class="flex flex-row justify-center items-center m-[4rem] mt-[5rem] space-x-10 items-start"
         >
@@ -55,8 +77,10 @@
             />
           </div>
         </div>
-      </section>
+      </section> -->
 
+      
+      
       <section>
         <div
           class="flex flex-col justify-center items-center m-[2rem] px-[4px]"
@@ -310,7 +334,7 @@
             Don't Hesitate to say
           </span>
           <span
-            class="absolute right-[42rem] bottom-[14rem] text-3xl border-2 rounded-lg w-40 p-2 text-center text-white hover:bg-teal-700"
+            class="absolute right-[42rem] bottom-[14rem] text-3xl border-2 rounded-lg w-40 p-2 text-center text-white hover:bg-teal-00"
           >
             Link ↗
           </span>
@@ -322,5 +346,6 @@
       <h1 class="text-6xl ml-20">Footer Section</h1>
       </section>
     </div>
+
   </body>
 </html>

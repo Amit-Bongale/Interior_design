@@ -60,43 +60,11 @@ body{
   display: none !important;
 }
 
-.hide-scrollbar {
-  scrollbar-width: none;        
-  -ms-overflow-style: none;    
+.button:hover{
+  span{
+    border: none;
+  }
+  img{
+    transform: translateX(5px);
+  }
 }
-
-.hide-scrollbar::-webkit-scrollbar {
-  display: none;                
-}
-
-
-
-/* Add these to your existing CSS
-
-@keyframes sliderFade {
-  0% { opacity: 0; }
-  5% { opacity: 1; }
-  30% { opacity: 1; }
-  35% { opacity: 0; }
-  100% { opacity: 0; }
-}
-
-.animate-slide {
-  animation-name: sliderFade;
-  animation-duration: 18s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-}
-
-/* Timing for each image */
-/* .fade-1 {
-  animation-delay: 0s;
-}
-.fade-2 {
-  animation-delay: 6s;
-}
-.fade-3 {
-  animation-delay: 12s;
-}  */
-

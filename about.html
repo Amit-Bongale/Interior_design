@@ -8,11 +8,13 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="bg-white">
     <nav
-      class="flex justify-around items-center border-b text-white p-8 absolute top-0 w-full bg-transparent border-white backdrop-blur-md"
+      class="flex justify-around items-center border-b text-white absolute top-0 w-full bg-transparent border-white backdrop-blur-md z-50"
     >
-      <div class="text-3xl font-bold tex tracking-wider">RENEVETE</div>
+      <div class="text-3xl font-bold tex tracking-wider border-r p-6">
+        RENEVETE
+      </div>
       <div class="flex space-x-6 list-none text-lg font-medium jost">
         <li>Home</li>
         <li>About us</li>
@@ -23,69 +25,111 @@
       </div>
     </nav>
 
-    <div class="flex flex-col">
-      <section>
-        <img
-          class="w-full h-100 object-cover"
-          src="/Assets/aboutpage/aboutgrid/aboutgrid4.jpg"
-          alt="aboutpage"
-        />
-      </section>
+    <section class="w-full h-[100vh] relative overflow-hidden bg-white">
+      <swiper-container
+        slides-per-view="1"
+        speed="500"
+        loop="true"
+        autoplay="true"
+        autoplay-delay="3000"
+        autoplay-disable-on-interaction="false"
+        effect="fade"
+      >
+        <swiper-slide class="p-2">
+          <div
+            class="absolute top-[350px] left-[10%] transform -translate-y-1/2 text-white z-10 w-[40rem] z-2"
+          >
+            <h1 class="text-8xl">Discover the Art of Living</h1>
+            <h4 class="relative text-xl top-20 w-150 jost">
+              interior design aims to create spaces that not only look visually
+              appealing but also enhance the well-being and quality of life.
+            </h4>
+          </div>
+          <img
+            src="/Assets/Images/bright-living-room-decorating-with-rattan-furniture.jpg"
+            alt="hero"
+            class="w-[100vw] overflow-hidden h-194 object-cover imgeanimate"
+          />
+        </swiper-slide>
+        <swiper-slide class="p-2">
+          <div class="absolute top-50 left-100 text-white w-190 z-2">
+            <h1 class="text-8xl">Creating Harmony Through Design</h1>
+            <h4 class="relative text-xl top-20 w-150 jost">
+              nterior design encompasses various aspects, including selecting
+              and arranging furniture, choosing color schemes.
+            </h4>
+          </div>
+          <img
+            src="/Assets/Images/composition-living-room-interior-with-copy-spaceplants-cacti-boho-accessories-template.jpg"
+            alt="hero"
+            class="w-[100vw] overflow-hidden h-194 object-cover imgeanimate"
+          />
+        </swiper-slide>
+        <swiper-slide class="p-2">
+          <div class="absolute top-50 left-100 text-white w-190 z-2">
+            <h1 class="text-8xl">Where Style Meets Comfort</h1>
+            <h4 class="relative text-xl top-20 w-150 jost">
+              nterior design encompasses various aspects, including selecting
+              and arranging furniture, choosing color schemes.
+            </h4>
+          </div>
+          <img
+            src="/Assets/Images/stylish-compositon-modern-living-room-interior-with-frotte-armchair-sofa-plants-painting-wooden-commode-side-table-elegant-home-accessories-template-copy-spacexa.jpg"
+            alt="hero"
+            class="w-[100vw] overflow-hidden h-194 object-cover imgeanimate"
+          />
+        </swiper-slide>
+      </swiper-container>
+    </section>
 
-
-      <section class="flex flex-col  justify-center item-center">
-        <div class="flex flex-col space-y-4">
-          <h1 class="text-8xl text-teal-950 border-b p-4 ">About Us </h1>
-          <h3 class="text-4xl text-teal-800 jost">Where Imagination Meets Interiors</h3>
+    <div>
+      <section class="flex w-full justify-center items-center bg-white">
+        <div class="flex flex-col justify-center items-center">
+          <h1
+            class="text-8xl text-teal-950 border-b p-4 w-[500px] overflow-hidden"
+          >
+            About Us
+          </h1>
+          <h3 class="text-4xl text-teal-800 jost">
+            Where Imagination Meets Interiors
+          </h3>
         </div>
 
-        
-        <swiper-container loop="true" effect="cards" grabCursor="true" >
-          <swiper-slide class="p-2"><img src="/Assets/aboutpage/aboutgrid/aboutgrid1.jpg" alt="" class=""></swiper-slide>
-          <swiper-slide class="p-2"><img src="/Assets/aboutpage/aboutgrid/aboutgrid2.jpg" alt="" class=" "></swiper-slide>
-          <swiper-slide class="p-2"><img src="/Assets/aboutpage/aboutgrid/aboutgrid3.jpg" alt="" class=""></swiper-slide>
-          
-        </swiper-container> 
-        
-
+        <div class="flex justify-center items-center">
+          <swiper-container
+            loop="true"
+            effect="cards"
+            grabCursor="true"
+            autoplay="true"
+            autoplay-delay="3000"
+            autoplay-disable-on-interaction="false"
+            class="overflow-hidden w-[40rem] h-[40rem] ml-[8rem] mt-32"
+          >
+            <swiper-slide class="p-2 bg-transparent shadow-none"
+              ><img
+                src="/Assets/aboutpage/about1.jpg"
+                alt=""
+                class="size-[30rem]"
+            /></swiper-slide>
+            <swiper-slide class="p-2"
+              ><img
+                src="/Assets/aboutpage/about2.jpg"
+                alt=""
+                class="size-[30rem]"
+            /></swiper-slide>
+            <swiper-slide class="p-2"
+              ><img
+                src="/Assets/aboutpage/about3.jpg"
+                alt=""
+                class="size-[30rem]"
+            /></swiper-slide>
+          </swiper-container>
+        </div>
       </section>
 
-
-
-
-      <!-- <section>
-        <div
-          class="flex flex-row justify-center items-center m-[4rem] mt-[5rem] space-x-10 items-start"
-        >
-          <div class="flex flex-col space-y-4">
-            <span
-              class="text-[7rem] font-bold text-teal-950 border-b inline-block w-[500px]"
-            >
-              About Us
-            </span>
-
-            <span class="text-teal-950 text-3xl jost">
-              Where Imagination Meets Interiors
-            </span>
-          </div>
-
-          <div>
-            <img
-              class="w-[400px] h-[400px] rounded-lg shadow-lg ml-[10rem]"
-              src="/Assets/aboutpage/aboutpage.jpg"
-              alt="about section"
-            />
-          </div>
-        </div>
-      </section> -->
-
-      
-      
-      <section>
-        <div
-          class="flex flex-col justify-center items-center m-[2rem] px-[4px]"
-        >
-          <p class=" text-xl text-[rgb(79,105,107)] text-justify w-[80rem]">
+      <section class="bg-white">
+        <div class="flex flex-col justify-center items-center px-[4px]">
+          <p class="text-xl text-[rgb(79,105,107)] text-justify w-[80rem]">
             Renovatio, we believe that every space has the potential to be
             transformed into a work of art. With a passion for design and a
             commitment to excellence, we strive to create captivating interiors
@@ -107,8 +151,8 @@
         </div>
       </section>
 
-      <section>
-        <div class="flex justify-center items-center mt-[4rem]">
+      <section class="bg-white pt-20">
+        <div class="bg-white flex justify-center items-center">
           <img
             src="/Assets/aboutpage/about1.jpg"
             alt=""
@@ -136,12 +180,13 @@
           />
         </div>
       </section>
+      <div class="flex justify-center pt-10 bg-white">
+        <hr
+          class="absolute border-b border-teal-950 w-[80%] mx-auto bg-white"
+        />
+      </div>
 
-      <hr
-        class="border-[rgb(79,105,107)] border-b mt-[4rem] w-[75rem] mx-auto rounded-[30px]"
-      />
-
-      <section>
+      <section class="bg-white">
         <div class="flex justify-center items-center m-0">
           <div class="flex flex-col justify-center items-center">
             <span class="text-2xl text-teal-950 font-bold jost"
@@ -176,8 +221,8 @@
         </div>
       </section>
 
-      <section>
-        <div class="flex flex-col ml-[5rem] mt-[3rem]">
+      <section class="bg-white">
+        <div class="flex flex-col ml-[5rem] pt-10">
           <span
             class="border-t inline-block w-[850px] p-0 m-0 text-4xl text-teal-950 font-bold"
             >"Discover Our Passion for Creating Timeless and Innovative
@@ -223,8 +268,8 @@
         </div>
       </section>
 
-      <section>
-        <div class="flex flex-col mt-[3rem] ml-[5rem]">
+      <section class="bg-white">
+        <div class="flex flex-col pt-20 ml-[5rem]">
           <span
             class="text-teal-950 text-[6rem] font-bold border-b border-[rgb(7,56,66)] inline-block w-[800px] p-0"
           >
@@ -235,7 +280,7 @@
           </span>
         </div>
 
-        <div class="grid grid-cols-3 m-[3rem] gap-y-5 gap-x-5">
+        <div class="grid grid-cols-3 p-20 gap-y-5 gap-x-5">
           <img
             src="/Assets/aboutpage/aboutgrid/aboutgrid1.jpg"
             alt=""
@@ -269,8 +314,8 @@
         </div>
       </section>
 
-      <section>
-        <div class="flex flex-col mt-20">
+      <section class="bg-white">
+        <div class="bg-white flex flex-col pt-5">
           <h1
             class="text-8xl text-teal-950 font-bold border-b inline-block w-[80rem] ml-20 p-8"
           >
@@ -280,7 +325,7 @@
             >The Faces Behind Our Success, Meet Our Interior Design
             Experts.</span
           >
-          <div class="flex justify-center items-center mt-20 space-x-20">
+          <div class="flex justify-center items-center mt-10 space-x-20">
             <img
               src="/Assets/aboutpage/persons/t-01.jpg"
               alt=""
@@ -298,7 +343,7 @@
             />
           </div>
 
-          <div class="mt-16">
+          <div class="pt-20 bg-white">
             <h3
               class="absolute right-72 text-2xl underline underline-offset-4 transition-all duration-300 hover:underline-offset-8"
             >
@@ -308,18 +353,20 @@
         </div>
       </section>
 
-      <section class="mt-20">
-        <h1 class="text-8xl ml-20 border-b p-4 w-100">Get in Touch</h1>
+      <section class="bg-white p-20">
+        <h1 class="text-8xl ml-20 border-b  p-4 w-[50%]">Get in Touch</h1>
         <h2 class="text-4xl ml-24 mt-2 jost">
           Building Relationships, One Conversation at a Time
         </h2>
+        </section>
 
+        <section >
         <div class="relative w-full h-[600px] overflow-hidden mt-16">
           <div class="h-full overflow-y-scroll hide-scrollbar">
             <img
               src="/Assets/aboutpage/about1.jpg"
               alt="interior"
-              class="w-full h-[1000px] object-cover"
+              class="w-full h-[1000px] object-cover fixed bottom-0 z-[-1]"
             />
           </div>
 
@@ -333,19 +380,51 @@
           >
             Don't Hesitate to say
           </span>
-          <span
-            class="absolute right-[42rem] bottom-[14rem] text-3xl border-2 rounded-lg w-40 p-2 text-center text-white hover:bg-teal-00"
+          <button
+            class="absolute right-[42rem] bottom-[14rem] text-3xl border-2 rounded-lg w-40 p-2 text-center text-white hover:bg-teal-950"
           >
             Link ↗
-          </span>
+          </button>
+        </div>
+        </section>
+      
+
+      <section class="bg-white ">
+        
+        <div class="flex  bg-teal-950 grid grid-cols-3 h-[350px]">
+          <div class="flex  flex-col justify-center items-center text-white p-10 ">
+            <h3 class="p-2">Bengaluru office</h3>
+            <h3 class=" ">abc@gmail.com</h3>
+            <br>
+            <h3 class="p-1">+789412215</h3>
+            <h3 class="">Rajajinagar, Shankarmatha</h3>
+          </div>
+
+          <div class="flex  flex-col justify-center items-center text-white p-10 ">
+            <h3 class="p-2">Bengaluru office</h3>
+            <h3 class="">abc@gmail.com</h3>
+            <br>
+            <h3 class="p-1">+789421358</h3>
+            <h3 class="">Basvangudi</h3>
+          </div>
+
+           <div class="flex  flex-col justify-center items-center text-white p-10 ">
+            <h3 class="p-2">Bengaluru office</h3>
+            <h3 class=" ">abc@gmail.com</h3>
+            <br>
+            <h3 class="p-1">+5846 7854</h3>
+            
+            <h3 class="">Hebbala</h3>
+          </div>
+
         </div>
       </section>
 
-
-      <section class="mt-20">
-      <h1 class="text-6xl ml-20">Footer Section</h1>
+      <section class="bg-white">
+        <div class="flex justify-center items-center p-8 jost">
+          <h3>© 2025 Interior Design By Kartik</h3>
+        </div>
       </section>
     </div>
-
   </body>
 </html>

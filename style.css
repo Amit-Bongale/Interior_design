@@ -59,3 +59,12 @@ body{
 .swiper-slide-shadow {
   display: none !important;
 }
+
+.button:hover{
+  span{
+    border: none;
+  }
+  img{
+    transform: translateX(5px);
+  }
+}

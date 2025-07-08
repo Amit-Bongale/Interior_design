@@ -3,30 +3,76 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>About Us</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="bg-white">
     <nav
-      class="flex justify-around items-center border-b text-white absolute top-0 w-full bg-transparent border-white backdrop-blur-md z-50"
+      class="flex justify-between items-center border-b text-white absolute top-0 w-full bg-transparent border-white backdrop-blur-md z-50 p-4"
     >
-      <div class="text-3xl font-bold tex tracking-wider border-r p-6">
-        RENEVETE
+      <!-- Logo -->
+      <div class="text-2xl font-bold tracking-wider">RENEVETE</div>
+
+      <!-- Hamburger Menu Icon -->
+      <div class="md:hidden">
+        <button id="menu-toggle" class="focus:outline-none">
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
       </div>
-      <div class="flex space-x-6 list-none text-lg font-medium jost">
-        <li>Home</li>
-        <li>About us</li>
-        <li>Services</li>
-        <li>Project</li>
-        <li>News</li>
-        <li>Contact</li>
-      </div>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-6 text-lg font-medium jost">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Project</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
     </nav>
 
-    <section class="w-full h-[100vh] relative overflow-hidden bg-white">
+    <!-- Mobile Menu -->
+    <ul
+      id="mobile-menu"
+      class="md:hidden hidden flex-col text-black text-lg font-medium jost bg-white w-full px-6 py-4 space-y-4"
+    >
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/about.html">About us</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Project</a></li>
+      <li><a href="#">News</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <!-- Toggle Script -->
+    <script>
+      const toggleBtn = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      toggleBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+
+    <section class="w-full h-screen relative overflow-hidden bg-white">
       <swiper-container
+        id="slider"
         slides-per-view="1"
         speed="500"
         loop="true"
@@ -35,396 +81,743 @@
         autoplay-disable-on-interaction="false"
         effect="fade"
       >
-        <swiper-slide class="p-2">
-          <div
-            class="absolute top-[350px] left-[10%] transform -translate-y-1/2 text-white z-10 w-[40rem] z-2"
-          >
-            <h1 class="text-8xl">Discover the Art of Living</h1>
-            <h4 class="relative text-xl top-20 w-150 jost">
-              interior design aims to create spaces that not only look visually
-              appealing but also enhance the well-being and quality of life.
-            </h4>
-          </div>
+        <!-- Slide 1 -->
+        <swiper-slide class="relative">
           <img
             src="/Assets/Images/bright-living-room-decorating-with-rattan-furniture.jpg"
             alt="hero"
-            class="w-[100vw] overflow-hidden h-194 object-cover imgeanimate"
+            class="w-full h-screen object-cover"
           />
-        </swiper-slide>
-        <swiper-slide class="p-2">
-          <div class="absolute top-50 left-100 text-white w-190 z-2">
-            <h1 class="text-8xl">Creating Harmony Through Design</h1>
-            <h4 class="relative text-xl top-20 w-150 jost">
-              nterior design encompasses various aspects, including selecting
-              and arranging furniture, choosing color schemes.
+          <div
+            class="absolute inset-0 flex flex-col justify-center px-6 md:px-16 text-white z-10"
+          >
+            <h1 class="text-3xl sm:text-5xl lg:text-7xl font-bold mb-6">
+              Discover the Art of Living
+            </h1>
+            <h4 class="text-sm sm:text-base lg:text-xl max-w-xl">
+              Interior design aims to create spaces that not only look visually
+              appealing but also enhance the well-being and quality of life.
             </h4>
           </div>
+        </swiper-slide>
+
+        <!-- Slide 2 -->
+        <swiper-slide class="relative">
           <img
             src="/Assets/Images/composition-living-room-interior-with-copy-spaceplants-cacti-boho-accessories-template.jpg"
             alt="hero"
-            class="w-[100vw] overflow-hidden h-194 object-cover imgeanimate"
+            class="w-full h-screen object-cover"
           />
-        </swiper-slide>
-        <swiper-slide class="p-2">
-          <div class="absolute top-50 left-100 text-white w-190 z-2">
-            <h1 class="text-8xl">Where Style Meets Comfort</h1>
-            <h4 class="relative text-xl top-20 w-150 jost">
-              nterior design encompasses various aspects, including selecting
+          <div
+            class="absolute inset-0 flex flex-col justify-center px-6 md:px-16 text-white z-10"
+          >
+            <h1 class="text-3xl sm:text-5xl lg:text-7xl font-bold mb-6">
+              Creating Harmony Through Design
+            </h1>
+            <h4 class="text-sm sm:text-base lg:text-xl max-w-xl">
+              Interior design encompasses various aspects, including selecting
               and arranging furniture, choosing color schemes.
             </h4>
           </div>
+        </swiper-slide>
+
+        <!-- Slide 3 -->
+        <swiper-slide class="relative">
           <img
             src="/Assets/Images/stylish-compositon-modern-living-room-interior-with-frotte-armchair-sofa-plants-painting-wooden-commode-side-table-elegant-home-accessories-template-copy-spacexa.jpg"
             alt="hero"
-            class="w-[100vw] overflow-hidden h-194 object-cover imgeanimate"
+            class="w-full h-screen object-cover"
           />
+          <div
+            class="absolute inset-0 flex flex-col justify-center px-6 md:px-16 text-white z-10"
+          >
+            <h1 class="text-3xl sm:text-5xl lg:text-7xl font-bold mb-6">
+              Where Style Meets Comfort
+            </h1>
+            <h4 class="text-sm sm:text-base lg:text-xl max-w-xl">
+              Interior design encompasses various aspects, including selecting
+              and arranging furniture, choosing color schemes.
+            </h4>
+          </div>
         </swiper-slide>
       </swiper-container>
+
+      <!-- Navigation Buttons -->
+      <div class="absolute bottom-6 right-6 flex space-x-4 z-50">
+        <button
+          id="left-btn"
+          class="p-2 border border-black rounded-full bg-white hover:bg-black hover:invert transition"
+        >
+          <img
+            src="/Assets/aboutpage/arrow (3).png"
+            alt="Left"
+            class="h-8 w-8 sm:h-10 sm:w-10"
+          />
+        </button>
+        <button
+          id="right-btn"
+          class="p-2 border border-black rounded-full bg-white hover:bg-black hover:invert transition"
+        >
+          <img
+            src="/Assets/aboutpage/arrow (2).png"
+            alt="Right"
+            class="h-8 w-8 sm:h-10 sm:w-10"
+          />
+        </button>
+      </div>
     </section>
 
     <div>
-      <section class="flex w-full justify-center items-center bg-white">
-        <div class="flex flex-col justify-center items-center">
-          <h1
-            class="text-8xl text-teal-950 border-b p-4 w-[500px] overflow-hidden"
-          >
-            About Us
-          </h1>
-          <h3 class="text-4xl text-teal-800 jost">
-            Where Imagination Meets Interiors
-          </h3>
-        </div>
+      <section class="bg-white w-full overflow-hidden px-4 sm:px-8 py-16">
+        <div
+          class="flex flex-col xl:flex-row items-center justify-center gap-12"
+        >
+          <!-- Text Section -->
+          <div class="text-center xl:text-left max-w-2xl">
+            <h1
+              data-aos="fade-left"
+              class="text-4xl sm:text-6xl xl:text-8xl text-teal-950 font-bold border-b border-teal-950 pb-2"
+            >
+              About Us
+            </h1>
+            <h3
+              data-aos="fade-left"
+              class="text-xl sm:text-2xl xl:text-4xl text-teal-800 font-medium mt-4 jost"
+            >
+              Where Imagination Meets Interiors
+            </h3>
+          </div>
 
-        <div class="flex justify-center items-center">
-          <swiper-container
-            loop="true"
-            effect="cards"
-            grabCursor="true"
-            autoplay="true"
-            autoplay-delay="3000"
-            autoplay-disable-on-interaction="false"
-            class="overflow-hidden w-[40rem] h-[40rem] ml-[8rem] mt-32"
-          >
-            <swiper-slide class="p-2 bg-transparent shadow-none"
-              ><img
-                src="/Assets/aboutpage/about1.jpg"
-                alt=""
-                class="size-[30rem]"
-            /></swiper-slide>
-            <swiper-slide class="p-2"
-              ><img
-                src="/Assets/aboutpage/about2.jpg"
-                alt=""
-                class="size-[30rem]"
-            /></swiper-slide>
-            <swiper-slide class="p-2"
-              ><img
-                src="/Assets/aboutpage/about3.jpg"
-                alt=""
-                class="size-[30rem]"
-            /></swiper-slide>
-          </swiper-container>
+          <!-- Swiper Section -->
+          <div class="w-full max-w-xl xl:ml-12 mt-10 xl:mt-0">
+            <swiper-container
+              data-aos="fade-left"
+              effect="cards"
+              grab-cursor="true"
+              autoplay-delay="2000"
+              autoplay-disable-on-interaction="false"
+              class="w-full h-[28rem] sm:h-[32rem] xl:h-[38rem] cursor-pointer"
+            >
+              <swiper-slide class="p-2 bg-transparent shadow-none">
+                <img
+                  src="/Assets/aboutpage/about1.jpg"
+                  alt="About Slide 1"
+                  class="w-full h-full object-cover rounded-xl"
+                />
+              </swiper-slide>
+              <swiper-slide class="p-2 bg-transparent shadow-none">
+                <img
+                  src="/Assets/aboutpage/about2.jpg"
+                  alt="About Slide 2"
+                  class="w-full h-full object-cover rounded-xl"
+                />
+              </swiper-slide>
+              <swiper-slide class="p-2 bg-transparent shadow-none">
+                <img
+                  src="/Assets/aboutpage/about3.jpg"
+                  alt="About Slide 3"
+                  class="w-full h-full object-cover rounded-xl"
+                />
+              </swiper-slide>
+            </swiper-container>
+          </div>
         </div>
       </section>
 
-      <section class="bg-white">
-        <div class="flex flex-col justify-center items-center px-[4px]">
-          <p class="text-xl text-[rgb(79,105,107)] text-justify w-[80rem]">
-            Renovatio, we believe that every space has the potential to be
-            transformed into a work of art. With a passion for design and a
-            commitment to excellence, we strive to create captivating interiors
-            that reflect the unique personalities and aspirations of our
-            clients.Our team of talented designers, architects, and craftsmen
-            collaborates closely with each client to understand their vision and
-            bring it to life.Whether it’s a residential project, commercial
-            space, or a hospitality establishment, we approach each project with
-            creativity, professionalism, and a commitment to excellence. Our
-            portfolio showcases a diverse range of projects that highlight our
-            versatility and ability to adapt to different design styles and
-            requirements.What sets us apart is our attention to detail and our
-            commitment to delivering exceptional results. We meticulously plan
-            every aspect of the design process, from space planning and
-            furniture selection to material choices and lighting design. Our
-            goal is to create harmonious environments that not only inspire but
-            also enhance the daily lives of those who inhabit them.
+      <section class="bg-white py-8 px-4 sm:px-8 lg:px-20">
+        <div
+          class="flex flex-col justify-center items-center max-w-6xl mx-auto"
+        >
+          <p
+            class="text-[rgb(79,105,107)] text-base sm:text-lg text-justify leading-relaxed"
+          >
+            At <span class="font-semibold text-teal-950">Renovatio</span>, we
+            believe every space has the potential to become a work of art. With
+            a deep passion for design and a steadfast commitment to excellence,
+            we craft captivating interiors that reflect our clients’ unique
+            personalities and aspirations. 
+            Our team of talented designers, architects, and craftsmen
+            collaborate closely with each client to understand their vision and
+            bring it to life. Whether it’s a residential project, commercial
+            space, or hospitality environment, we approach every project with
+            creativity, precision, and professionalism.
+            
+            Our diverse portfolio showcases versatility across design styles and
+            requirements. What truly sets us apart is our meticulous attention
+            to detail—from space planning and furniture selection to materials
+            and lighting design.
+            
+            Our ultimate goal is to create harmonious, inspiring environments
+            that elevate everyday living and leave a lasting impression.
           </p>
         </div>
       </section>
 
-      <section class="bg-white pt-20">
-        <div class="bg-white flex justify-center items-center">
+      <div class="bg-white">
+        <button class="relative left-14 top-[457px]" id="left-button">
           <img
-            src="/Assets/aboutpage/about1.jpg"
+            src="/Assets/aboutpage/left-arrow (2).png"
             alt=""
-            class="w-[400px] h-[300px]"
+            class="w-10 h-10"
           />
+        </button>
 
-          <div class="flex flex-col justify-center items-center m-[4rem]">
-            <span class="text-2xl text-teal-950 font-bold jost"
-              >Completing The First Project</span
-            >
-
-            <span
-              class="text-xl text-[rgb(79,105,107)] max-w-[400px] text-justify mt-[1rem]"
-            >
-              Completing The First Project The company completes its first major
-              project, a LEED-certified office building that sets a new standard
-              for environmentally friendly design. 1973 - 1998</span
-            >
-          </div>
-
+        <button
+          class="relative right-14 top-[457px] float-right"
+          id="right-button"
+        >
           <img
-            src="/Assets/aboutpage/about2.jpg"
+            src="/Assets/aboutpage/right-arrow (2).png"
             alt=""
-            class="w-[400px] h-[300px]"
+            class="w-10 h-10"
           />
-        </div>
-      </section>
-      <div class="flex justify-center pt-10 bg-white">
-        <hr
-          class="absolute border-b border-teal-950 w-[80%] mx-auto bg-white"
-        />
+        </button>
       </div>
 
-      <section class="bg-white">
-        <div class="flex justify-center items-center m-0">
-          <div class="flex flex-col justify-center items-center">
-            <span class="text-2xl text-teal-950 font-bold jost"
-              >Renovatio Founding</span
-            >
-
-            <span
-              class="text-xl text-[rgb(79,105,107)] mt-[1rem] max-w-[400px] text-justify text-center"
-            >
-              The company is founded by Armin Smith, an experienced interior
-              design with a passion for sustainable design. 1896</span
-            >
-          </div>
-
-          <img
-            src="/Assets/aboutpage/about3.jpg"
-            alt=""
-            class="w-[400px] h-[300px] m-[4rem]"
-          />
-
-          <div class="flex flex-col justify-center items-center">
-            <span class="text-2xl text-teal-950 font-bold jost"
-              >Residential Projects</span
-            >
-            <span
-              class="text-xl text-[rgb(79,105,107)] max-w-[400px] text-justify mt-[1rem]"
-              >In the residential sector, Renovatio Interir works closely with
-              homeowners to understand their vision, preferences, and lifestyle
-              requirements. 2001</span
-            >
-          </div>
-        </div>
-      </section>
-
-      <section class="bg-white">
-        <div class="flex flex-col ml-[5rem] pt-10">
-          <span
-            class="border-t inline-block w-[850px] p-0 m-0 text-4xl text-teal-950 font-bold"
-            >"Discover Our Passion for Creating Timeless and Innovative
-            Designs"</span
-          >
-
-          <div class="flex justify-center items-center mt-[3rem]">
+      <section class="bg-white p-10 overflow-hidden">
+        <swiper-container
+          slides-per-view="3"
+          id="swipe-head"
+          class="m-12"
+          breakpoints='{
+      "425": { "slidesPerView": 1 },
+      
+      "768": { "slidesPerView": 2 },
+      "1024": { "slidesPerView": 3 }
+    }'
+        >
+          <!-- slide-1 -->
+          <swiper-slide class="flex flex-col justify-center items-center">
             <img
-              src="/Assets/aboutpage/about4.jpg"
+              src="/Assets/aboutpage/about1.jpg"
               alt=""
-              class="w-[600px] h-[500px]"
+              data-aos="fade-down"
+              class="w-[300px] h-[200px] mt-16 pb-[10px]"
             />
-            <span
-              class="text-xl text-[rgb(79,105,107)] max-w-[600px] m-[4rem] text-justify"
-              >We believe that good design should not only be aesthetically
-              pleasing, but also functional and environmentally responsible. Our
-              approach to architecture is rooted in a deep understanding of our
-              clients’ needs and the context in which we are designing. We work
-              closely with our clients throughout the entire design process to
-              ensure that their vision is realized and that their space is both
-              beautiful and practical.</span
-            >
-          </div>
 
-          <div class="flex justify-start items-center">
-            <span
-              class="text-xl text-[rgb(79,105,107)] max-w-[600px] m-[4rem] text-justify"
-              >We believe that good design should not only be aesthetically
-              pleasing, but also functional and environmentally responsible. Our
-              approach to architecture is rooted in a deep understanding of our
-              clients’ needs and the context in which we are designing. We work
-              closely with our clients throughout the entire design process to
-              ensure that their vision is realized and that their space is both
-              beautiful and practical.</span
-            >
+            <div class="flex justify-center pt-20 bg-white">
+              <img
+                src="/Assets/aboutpage/dot.png"
+                alt=""
+                class="w-10 h-10 relative bottom-5 z-50 color-[rbg(7,56,66)]"
+              />
+              <hr
+                class="absolute border-b border-teal-950 bg-white w-[90%] sm:w-[85%] md:w-[80%] lg:w-[75%] xl:w-[90%] 2xl:w-[100%] mx-auto"
+              />
+            </div>
 
+            <!-- <div class="flex justify-center pt-20 bg-white">
+              <img src="/Assets/aboutpage/dot.png" alt="" class="w-10 h-10 relative bottom-5 z-50 color-[rbg(7,56,66)]">
+              <hr
+                class="absolute border-b border-teal-950 w-[100%] mx-auto bg-white"
+              />
+              
+            </div> -->
+
+            <div class="flex flex-col justify-center items-center">
+              <span
+                data-aos="fade-up"
+                class="text-xl text-teal-950 font-bold jost pt-10"
+                >Completing The First Project</span
+              >
+
+              <span
+                data-aos="fade-up"
+                class="text-normal text-[rgb(79,105,107)] text-justify w-[70%] pt-2"
+              >
+                Completing The First Project The company completes its first
+                major project, a LEED-certified office building that sets a new
+                standard for environmentally friendly design.
+              </span>
+              <h3 class="pt-2">1973 - 1998</h3>
+            </div>
+          </swiper-slide>
+
+          <!-- slide-2 -->
+          <swiper-slide class="bg-white">
+            <div class="flex flex-col justify-center items-center">
+              <h3
+                data-aos="fade-down"
+                class="text-xl font-bold jost text-center mt-16 p-2"
+              >
+                Completing The First Project
+              </h3>
+
+              <p
+                data-aos="fade-down"
+                class="text-normal text-justify text-[rgb(79,105,107)] w-[70%]"
+              >
+                Completing The First Project The company completes its first
+                major project, a LEED-certified office building that sets a new
+                standard for environmentally friendly design.
+              </p>
+              <h3 class="xl:pb-12 xl:pt-2 lg:pb-4">1973 - 1998</h3>
+
+              <div class="flex justify-center xl:pt-[36px] bg-white lg:pt-1">
+                <img
+                  src="/Assets/aboutpage/dot.png"
+                  alt=""
+                  class="w-10 h-10 relative bottom-5 z-50"
+                />
+                <hr
+                  class="absolute border-b border-teal-950 bg-white w-[90%] sm:w-[85%] md:w-[80%] lg:w-[75%] xl:w-[70%] 2xl:w-[100%] mx-auto"
+                />
+              </div>
+
+              <img
+                src="/Assets/aboutpage/about2.jpg"
+                alt=""
+                data-aos="fade-up"
+                data-aos="fade-down"
+                class="w-[300px] h-[180px] mt-10"
+              />
+            </div>
+          </swiper-slide>
+
+          <!-- slide-3 -->
+
+          <swiper-slide class="flex flex-col justify-center items-center">
+            <img
+              src="/Assets/aboutpage/about3.jpg"
+              alt=""
+              data-aos="fade-down"
+              data-aos="fade-down"
+              class="w-[300px] h-[240px] mt-16 pb-12"
+            />
+
+            <div class="flex justify-center pt-10 bg-white">
+              <img
+                src="/Assets/aboutpage/dot.png"
+                alt=""
+                class="w-10 h-10 relative bottom-5 z-50"
+              />
+              <hr
+                class="absolute border-b border-teal-950 bg-white w-[90%] sm:w-[85%] md:w-[80%] lg:w-[75%] xl:w-[70%] 2xl:w-[100%] mx-auto"
+              />
+            </div>
+
+            <div class="flex flex-col justify-center items-center">
+              <span
+                data-aos="fade-up"
+                class="text-xl text-teal-950 font-bold jost mt-10"
+                >Completing The First Project</span
+              >
+
+              <span
+                data-aos="fade-up"
+                class="text-normal text-[rgb(79,105,107)] text-justify w-[70%] pt-2"
+              >
+                Completing The First Project The company completes its first
+                major project, a LEED-certified office building that sets a new
+                standard for environmentally friendly design.
+              </span>
+              <h3 class="pt-2">1973 - 1998</h3>
+            </div>
+          </swiper-slide>
+
+          <!-- slide-4 -->
+          <swiper-slide class="bg-white">
+            <div class="flex flex-col justify-center items-center">
+              <h3
+                data-aos="fade-down"
+                class="text-xl font-bold jost text-center mt-16 p-2"
+              >
+                Completing The First Project
+              </h3>
+
+              <p
+                data-aos="fade-down"
+                class="text-normal text-justify text-[rgb(79,105,107)] w-[70%]"
+              >
+                Completing The First Project The company completes its first
+                major project, a LEED-certified office building that sets a new
+                standard for environmentally friendly design.
+              </p>
+              <h3 class="xl:pb-12 xl:pt-2 lg:pb-4">1973 - 1998</h3>
+
+              <div class="flex justify-center xl:pt-[36px] bg-white lg:pt-1">
+                <img
+                  src="/Assets/aboutpage/dot.png"
+                  alt=""
+                  class="w-10 h-10 relative bottom-5 z-50"
+                />
+                <hr
+                  class="absolute border-b border-teal-950 bg-white w-[90%] sm:w-[85%] md:w-[80%] lg:w-[75%] xl:w-[70%] 2xl:w-[100%] mx-auto"
+                />
+              </div>
+
+              <img
+                src="/Assets/aboutpage/about4.jpg"
+                alt=""
+                data-aos="fade-up"
+                class="w-[300px] h-[180px] mt-10"
+              />
+            </div>
+          </swiper-slide>
+
+          <!-- slide-5 -->
+          <swiper-slide class="flex flex-col justify-center items-center">
             <img
               src="/Assets/aboutpage/about5.jpg"
               alt=""
-              class="w-[600px] h-[500px]"
+              data-aos="fade-down"
+              class="w-[300px] h-[240px] mt-16 pb-12"
             />
+
+            <div class="flex justify-center pt-10 bg-white">
+              <img
+                src="/Assets/aboutpage/dot.png"
+                alt=""
+                class="w-10 h-10 relative bottom-5 z-50"
+              />
+              <hr
+                class="absolute border-b border-teal-950 bg-white w-[90%] sm:w-[85%] md:w-[80%] lg:w-[75%] xl:w-[70%] 2xl:w-[100%] mx-auto"
+              />
+            </div>
+
+            <div class="flex flex-col justify-center items-center">
+              <span
+                data-aos="fade-up"
+                class="text-xl text-teal-950 font-bold jost mt-10"
+                >Completing The First Project</span
+              >
+
+              <span
+                data-aos="fade-up"
+                class="text-normal text-[rgb(79,105,107)] text-justify w-[70%] pt-2"
+              >
+                Completing The First Project The company completes its first
+                major project, a LEED-certified office building that sets a new
+                standard for environmentally friendly design.
+              </span>
+              <h3 class="pt-2">1973 - 1998</h3>
+            </div>
+          </swiper-slide>
+        </swiper-container>
+      </section>
+
+      <section class="bg-white pt-10">
+        <div class="flex flex-col px-4 sm:px-8 lg:px-16">
+          <!-- Top Text Banner -->
+          <span
+            data-aos="fade-up"
+            class="border-t border-teal-950 inline-block w-full max-w-6xl pt-4 text-teal-950 font-bold text-xl sm:text-2xl md:text-3xl xl:text-4xl"
+          >
+            "Discover Our Passion for Creating Timeless and Innovative Designs"
+          </span>
+
+          <!-- First Image + Text Row -->
+          <div
+            class="flex flex-col lg:flex-row justify-center items-center gap-10 mt-12"
+          >
+            <img
+              src="/Assets/aboutpage/about4.jpg"
+              alt=""
+              data-aos="fade-down"
+              class="w-full lg:w-[50%] h-auto max-w-[600px] rounded-md shadow-md"
+            />
+            <span
+              class="text-[rgb(79,105,107)] text-justify text-base sm:text-lg max-w-xl"
+            >
+              We believe that good design should not only be aesthetically
+              pleasing, but also functional and environmentally responsible. Our
+              approach to architecture is rooted in a deep understanding of our
+              clients’ needs and the context in which we are designing. We work
+              closely with our clients throughout the entire design process to
+              ensure that their vision is realized and that their space is both
+              beautiful and practical.
+            </span>
+          </div>
+
+          <!-- Second Text + Image Row -->
+          <div
+            class="flex flex-col lg:flex-row-reverse justify-center items-center gap-10 mt-12"
+          >
+            <img
+              src="/Assets/aboutpage/about5.jpg"
+              alt=""
+              data-aos="fade-up"
+              class="w-full lg:w-[50%] h-auto max-w-[600px] rounded-md shadow-md"
+            />
+            <span
+              class="text-[rgb(79,105,107)] text-justify text-base sm:text-lg max-w-xl"
+            >
+              We believe that good design should not only be aesthetically
+              pleasing, but also functional and environmentally responsible. Our
+              approach to architecture is rooted in a deep understanding of our
+              clients’ needs and the context in which we are designing. We work
+              closely with our clients throughout the entire design process to
+              ensure that their vision is realized and that their space is both
+              beautiful and practical.
+            </span>
           </div>
         </div>
       </section>
 
-      <section class="bg-white">
-        <div class="flex flex-col pt-20 ml-[5rem]">
+      <section class="bg-white overflow-hidden">
+        <!-- Heading Section -->
+        <div class="flex flex-col pt-20 px-4 sm:px-8 sm:ml-10">
           <span
-            class="text-teal-950 text-[6rem] font-bold border-b border-[rgb(7,56,66)] inline-block w-[800px] p-0"
+            data-aos="fade-left"
+            class="text-teal-950 text-4xl sm:text-5xl xl:text-6xl font-bold border-b border-[rgb(79,105,107)] inline-block max-w-[70%] sm:w-auto pb-4"
           >
             Showcase
           </span>
-          <span class="text-3xl text-teal-950 mt-2 jost">
+          <span
+            data-aos="fade-up"
+            class="text-2xl sm:text-3xl text-teal-950 mt-2 jost"
+          >
             Bringing visions to reality
           </span>
         </div>
 
-        <div class="grid grid-cols-3 p-20 gap-y-5 gap-x-5">
+        <!-- Image Grid -->
+        <div
+          data-aos="zoom-in-up"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 px-4 sm:px-8 lg:px-20 py-10"
+        >
+          <!-- Image Item -->
           <img
             src="/Assets/aboutpage/aboutgrid/aboutgrid1.jpg"
             alt=""
-            class="w-[500px] h-[300px] object-cover rounded-md shadow"
+            class="w-full h-64 sm:h-72 object-cover rounded-md shadow-lg cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105"
           />
           <img
             src="/Assets/aboutpage/aboutgrid/aboutgrid2.jpg"
             alt=""
-            class="w-[500px] h-[300px] object-cover rounded-md shadow"
+            class="w-full h-64 sm:h-72 object-cover rounded-md shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105"
           />
           <img
             src="/Assets/aboutpage/aboutgrid/aboutgrid3.jpg"
             alt=""
-            class="w-[500px] h-[300px] object-cover rounded-md shadow"
+            class="w-full h-64 sm:h-72 object-cover rounded-md shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105"
           />
           <img
             src="/Assets/aboutpage/aboutgrid/aboutgrid4.jpg"
             alt=""
-            class="w-[500px] h-[300px] object-cover rounded-md shadow"
+            class="w-full h-64 sm:h-72 object-cover rounded-md shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105"
           />
           <img
             src="/Assets/aboutpage/aboutgrid/aboutgrid5.jpg"
             alt=""
-            class="w-[500px] h-[300px] object-cover rounded-md shadow"
+            class="w-full h-64 sm:h-72 object-cover rounded-md shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105"
           />
           <img
             src="/Assets/aboutpage/aboutgrid/aboutgrid6.jpg"
             alt=""
-            class="w-[500px] h-[300px] object-cover rounded-md shadow"
+            class="w-full h-64 sm:h-72 object-cover rounded-md shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105"
           />
         </div>
       </section>
 
-      <section class="bg-white">
-        <div class="bg-white flex flex-col pt-5">
+      <section
+        class="bg-white w-full overflow-hidden py-10 px-4 sm:px-8 lg:px-16"
+      >
+        <!-- Heading -->
+        <div class="flex flex-col items-start">
           <h1
-            class="text-8xl text-teal-950 font-bold border-b inline-block w-[80rem] ml-20 p-8"
+            data-aos="fade-left"
+            class="text-3xl sm:text-5xl xl:text-7xl font-bold text-teal-950 border-b border-teal-900 inline-block w-[90%] pb-4"
           >
             Meet the Minds Behind the Projects
           </h1>
-          <span class="text-3xl text-teal-950 ml-28 mt-5 jost"
-            >The Faces Behind Our Success, Meet Our Interior Design
-            Experts.</span
+          <span
+            data-aos="fade-up"
+            class="text-lg sm:text-2xl text-teal-950 mt-4 jost"
           >
-          <div class="flex justify-center items-center mt-10 space-x-20">
+            The Faces Behind Our Success, Meet Our Interior Design Experts.
+          </span>
+        </div>
+
+        <!-- Team Members -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-10"
+        >
+          <!-- Member 1 -->
+          <div class="flex flex-col items-center overflow-hidden group">
             <img
               src="/Assets/aboutpage/persons/t-01.jpg"
-              alt=""
-              class="w-72 h-82 mt-32"
+              alt="Roger Craig"
+              class="w-[250px] h-[300px] sm:w-[250px] sm:h-[300px] border rounded-full object-cover transition-transform duration-300 group-hover:scale-105"
             />
-            <img
-              src="/Assets/aboutpage/persons/t-02.jpg"
-              alt=""
-              class="w-72 h-82"
-            />
-            <img
-              src="/Assets/aboutpage/persons/t-03.jpg"
-              alt=""
-              class="w-72 h-82 mt-32"
-            />
+            <div
+              class="bg-white w-full text-center p-4 transition-all duration-300 relative group-hover:-translate-y-4"
+            >
+              <h3 class="text-xl font-semibold text-teal-950">Roger Craig</h3>
+              <h4 class="text-gray-600 jost">CEO</h4>
+            </div>
           </div>
 
-          <div class="pt-20 bg-white">
-            <h3
-              class="absolute right-72 text-2xl underline underline-offset-4 transition-all duration-300 hover:underline-offset-8"
+          <!-- Member 2 -->
+          <div class="flex flex-col items-center overflow-hidden group sm:mt-10">
+            <img
+              src="/Assets/aboutpage/persons/t-02.jpg"
+              alt="Jane Smith"
+              class="w-[250px] h-[300px] sm:w-[250px] sm:h-[300px] border rounded-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
+            />
+            <div
+              class="bg-white w-full text-center p-4 transition-all duration-300 ease-in-out relative group-hover:-translate-y-4"
             >
-              Contact Us ↗
-            </h3>
+              <h3 class="text-xl font-semibold text-teal-950">Jane Smith</h3>
+              <h4 class="text-gray-600 jost">Design Director</h4>
+            </div>
           </div>
+
+
+          <!-- Member 3 -->
+          <div class="flex flex-col items-center overflow-hidden group">
+            <img
+              src="/Assets/aboutpage/persons/t-03.jpg"
+              alt="Allan Cooper"
+              class="w-[250px] h-[300px] sm:w-[250px] sm:h-[300px] border rounded-full object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+            <div
+              class="bg-white w-full text-center p-4 transition-all duration-300 relative group-hover:-translate-y-4"
+            >
+              <h3 class="text-xl font-semibold text-teal-950">Allan Cooper</h3>
+              <h4 class="text-gray-600 jost">Lead Architect</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Us Link -->
+        <div class="flex justify-center mt-12">
+          <a
+            href="#contact"
+            data-aos="fade-left"
+            class="text-lg sm:text-xl underline text-teal-950 hover:underline-offset-4 transition"
+          >
+            Contact Us ↗
+          </a>
         </div>
       </section>
 
-      <section class="bg-white p-20">
-        <h1 class="text-8xl ml-20 border-b  p-4 w-[50%]">Get in Touch</h1>
-        <h2 class="text-4xl ml-24 mt-2 jost">
+      <!-- Contact Section Title -->
+      <section class="bg-white py-16 px-4 sm:px-8 lg:px-20 overflow-hidden">
+        <h1
+          data-aos="fade-left"
+          class="text-4xl sm:text-6xl xl:text-8xl text-teal-950 font-bold border-b border-teal-950 pb-2 w-[70%] "
+        >
+          Get in Touch
+        </h1>
+        <h2
+          data-aos="fade-up"
+          class="text-xl sm:text-2xl lg:text-4xl text-teal-950 mt-4 jost max-w-4xl"
+        >
           Building Relationships, One Conversation at a Time
         </h2>
-        </section>
+      </section>
 
-        <section >
-        <div class="relative w-full h-[600px] overflow-hidden mt-16">
-          <div class="h-full overflow-y-scroll hide-scrollbar">
-            <img
-              src="/Assets/aboutpage/about1.jpg"
-              alt="interior"
-              class="w-full h-[1000px] object-cover fixed bottom-0 z-[-1]"
-            />
-          </div>
+      <!-- Background Call-To-Action Section -->
+      <section class="relative">
+        <div class="w-full h-[600px] relative overflow-hidden">
+          <img
+            src="/Assets/aboutpage/about1.jpg"
+            alt="interior"
+            class="  w-full h-full object-cover fixed bottom-0 z-[-1]"
+          />
 
-          <span
-            class="absolute right-[20rem] bottom-[24rem] text-7xl text-white"
+          
+
+          <!-- CTA Content -->
+          <div
+            class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4 sm:px-10 space-y-6"
           >
-            Have a project in mind?
-          </span>
-          <span
-            class="absolute right-[36rem] bottom-[20rem] text-4xl text-white"
-          >
-            Don't Hesitate to say
-          </span>
-          <button
-            class="absolute right-[42rem] bottom-[14rem] text-3xl border-2 rounded-lg w-40 p-2 text-center text-white hover:bg-teal-950"
-          >
-            Link ↗
-          </button>
-        </div>
-        </section>
-      
+            <span class="text-3xl sm:text-5xl xl:text-7xl font-bold text-white">
+              Have a project in mind?
+            </span>
 
-      <section class="bg-white ">
-        
-        <div class="flex  bg-teal-950 grid grid-cols-3 h-[350px]">
-          <div class="flex  flex-col justify-center items-center text-white p-10 ">
-            <h3 class="p-2">Bengaluru office</h3>
-            <h3 class=" ">abc@gmail.com</h3>
-            <br>
-            <h3 class="p-1">+789412215</h3>
-            <h3 class="">Rajajinagar, Shankarmatha</h3>
+            <span
+              data-aos="fade-left"
+              class="text-white text-base sm:text-lg max-w-xl"
+            >
+              Don't Hesitate to say
+            </span>
+
+            <button
+              data-aos="zoom-in-up"
+              class="border-2 border-white rounded-lg w-40 p-2 text-white text-base hover:bg-teal-950 transition-all duration-300"
+            >
+              Link ↗
+            </button>
           </div>
-
-          <div class="flex  flex-col justify-center items-center text-white p-10 ">
-            <h3 class="p-2">Bengaluru office</h3>
-            <h3 class="">abc@gmail.com</h3>
-            <br>
-            <h3 class="p-1">+789421358</h3>
-            <h3 class="">Basvangudi</h3>
-          </div>
-
-           <div class="flex  flex-col justify-center items-center text-white p-10 ">
-            <h3 class="p-2">Bengaluru office</h3>
-            <h3 class=" ">abc@gmail.com</h3>
-            <br>
-            <h3 class="p-1">+5846 7854</h3>
-            
-            <h3 class="">Hebbala</h3>
-          </div>
-
         </div>
       </section>
 
       <section class="bg-white">
-        <div class="flex justify-center items-center p-8 jost">
-          <h3>© 2025 Interior Design By Kartik</h3>
+        <div class="bg-teal-950 text-white py-10 px-4 sm:px-8">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto"
+          >
+            <!-- Office 1 -->
+            <div class="flex flex-col items-center text-center space-y-2">
+              <h3 class="text-xl font-semibold">Bengaluru Office</h3>
+              <p>abc@gmail.com</p>
+              <p>+91 78941 2215</p>
+              <p>Rajajinagar, Shankarmatha</p>
+            </div>
+
+            <!-- Office 2 -->
+            <div class="flex flex-col items-center text-center space-y-2">
+              <h3 class="text-xl font-semibold">Bengaluru Office</h3>
+              <p>abc@gmail.com</p>
+              <p>+91 78942 1358</p>
+              <p>Basavanagudi</p>
+            </div>
+
+            <!-- Office 3 -->
+            <div class="flex flex-col items-center text-center space-y-2">
+              <h3 class="text-xl font-semibold">Bengaluru Office</h3>
+              <p>abc@gmail.com</p>
+              <p>+91 5846 7854</p>
+              <p>Hebbal</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white border-t border-gray-200">
+        <div
+          class="flex justify-center items-center px-4 py-6 text-center jost"
+        >
+          <h3 class="text-base sm:text-lg text-gray-700">
+            © 2025 Interior Design by
+            <span class="font-semibold text-teal-950">Kartik</span>
+          </h3>
         </div>
       </section>
     </div>
+
+    <script src="/script.js"></script>
+    <script>
+      AOS.init({
+        duration: 500,
+        easing: "ease-in-sine",
+      });
+    </script>
+
+    <!-- tabelate view -->
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const swiperEl = document.querySelector("#swipe-head");
+
+        Object.assign(swiperEl, {
+          slidesPerView: 3, // Default for desktop
+          breakpoints: {
+            768: {
+              slidesPerView: 2, // For tablets (≥768px and <1024px)
+            },
+            1024: {
+              slidesPerView: 3, // For desktop (≥1024px)
+            },
+          },
+          spaceBetween: 20,
+          // navigation: true,
+          // pagination: { clickable: true },
+        });
+
+        swiperEl.initialize(); // Very important! This applies the settings
+      });
+    </script>
   </body>
 </html>

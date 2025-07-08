@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services</title>
+
+    <!-- tailwind css-->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-white">
+    <nav
+      class="absolute top-0 w-full z-99 bg-white backdrop-blur-md border-b border-black text-black"
+    >
+      <div class="flex justify-between md:justify-around items-center px-4">
+        <!-- Logo -->
+        <div
+          class="text-xl lg:text-4xl font-bold tracking-wider md:border-r p-6"
+        >
+          RENEVETE
+        </div>
+
+        <!-- Hamburger Icon (Mobile) -->
+        <button id="menu-toggle" class="md:hidden focus:outline-none">
+          <svg
+            class="w-6 h-6 text-black"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+
+        <!-- Nav Items (Desktop) -->
+        <ul class="hidden md:flex space-x-6 list-none text-xl font-medium jost">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/about.html">About us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Project</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Nav Items (Mobile Dropdown) -->
+      <ul
+        id="mobile-menu"
+        class="md:hidden hidden flex-col justify-center p-6 items-center space-y-4 mt-4 text-lg font-medium jost"
+      >
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Project</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section class="overflow-hidden h-80 md:h-150">
+      <swiper-container
+        slides-per-view="1"
+        speed="500"
+        loop="true"
+        class="overflow-hidden"
+        autoplay="true"
+        autoplay-delay="3000"
+        autoplay-disable-on-interaction="false"
+        effect="fade"
+      >
+        <!-- Slide 1 -->
+        <swiper-slide class="relative">
+          <img
+            src="/Assets/Images/services0bg.jpg"
+            alt="hero"
+            class="w-full h-[100vh] object-cover brightness-80 imgeanimate"
+          />
+        </swiper-slide>
+
+        <!-- Slide 2 -->
+        <swiper-slide class="relative">
+          <img
+            src="/Assets/Images/services1bg.jpg"
+            alt="hero"
+            class="w-full h-[100vh] object-cover brightness-80 imgeanimate"
+          />
+        </swiper-slide>
+
+        <!-- Slide 3 -->
+        <swiper-slide class="relative">
+          <img
+            src="/Assets/Images/stylish-compositon-modern-living-room-interior-with-frotte-armchair-sofa-plants-painting-wooden-commode-side-table-elegant-home-accessories-template-copy-spacexa.jpg"
+            alt="hero"
+            class="w-full h-[100vh] object-cover brightness-60 imgeanimate"
+          />
+        </swiper-slide>
+      </swiper-container>
+    </section>
+
+    <section
+      class="w-full bg-white overflow-hidden px-4 md:px-12 lg:px-26 py-16"
+    >
+      <div class="md:flex">
+        <div
+          class="w-full max-w-4xl border-b border-gray-300 p-4 md:p-8 whitespace-nowrap"
+        >
+          <h2 class="headlineanimation text-5xl sm:text-7xl xl:text-9xl">
+            Our
+          </h2>
+          <h2 class="headlineanimation text-5xl sm:text-7xl xl:text-9xl">
+            Services
+          </h2>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 md:gap-25 jost font-medium text-lg fade-up"
+        >
+          <ul>
+            <li class="p-1.5">Consultation</li>
+            <li class="p-1.5">Space Planning</li>
+            <li class="p-1.5">Concept Development</li>
+            <li class="p-1.5">Design Development</li>
+          </ul>
+          <ul>
+            <li class="p-1.5">3D Visualization</li>
+            <li class="p-1.5">Project Management</li>
+            <li class="p-1.5">Custom Design Elements</li>
+            <li class="p-1.5">Lighting Design</li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col md:flex-row justify-between items-start md:items-center text-xl md:text-2xl fade-up gap-4 mt-8"
+      >
+        <h2 class="md:p-6 fade-up">
+          Construction Services that Go Beyond Expectations
+        </h2>
+      </div>
+    </section>
+
+    <section
+      class="bg-white grid grid-cols-1 lg:grid-cols-2 w-full p-4 md:p-12 xl:p-38 pt-8 place-content-center gap-4 lg:gap-24"
+    >
+      <div class="">
+        <img src="/Assets/Images/service-featured1.jpg" alt="" class=" w-[300px] md:w-[600px] relative -top-20 slide" />
+      </div>
+
+      <div class="w-full max-w-2xl mx-auto my-8 space-y-4">
+        <!-- Item 1 -->
+        <details class="group border-b overflow-hidden">
+          <summary
+            class="cursor-pointer p-4 text-xl flex justify-between items-center"
+          >
+            Space Planning
+            <span class="transition-transform group-open:rotate-180">&or;</span>
+          </summary>
+          <div class="p-4 text-gray-700">
+            Renovatio Interiors provides expert space planning services to
+            optimize the functionality and flow of a given space. They analyze
+            the available area and create layouts that maximize efficiency and
+            create a harmonious environment.
+          </div>
+        </details>
+
+        <!-- Item 2 -->
+        <details class="group border-b overflow-hidden">
+          <summary
+            class="cursor-pointer p-4 text-xl flex justify-between items-center"
+          >
+            Interior Design Consultation
+            <span class="transition-transform group-open:rotate-180">&or;</span>
+          </summary>
+          <div class="p-4 text-gray-700">
+            Renovatio Interiors offers personalized consultations where clients
+            can seek professional advice on interior design decisions. They
+            provide recommendations on color schemes, furniture selection,
+            material choices, and overall aesthetics to help clients achieve
+            their desired look and feel.
+          </div>
+        </details>
+
+        <!-- Item 3 -->
+        <details class="group border-b overflow-hidden">
+          <summary
+            class="cursor-pointer p-4 text-xl flex justify-between items-center"
+          >
+            Concept Development and Visualization
+            <span class="transition-transform group-open:rotate-180">&or;</span>
+          </summary>
+          <div class="p-4 text-gray-700">
+            Renovatio Interiors excels in developing unique design concepts
+            tailored to each client's preferences. They create visual
+            representations of the proposed designs using 3D renderings, mood
+            boards, and sample boards, allowing clients to envision the final
+            outcome.
+          </div>
+        </details>
+      </div>
+
+      <div class="w-full max-w-2xl mx-auto my-8 space-y-4">
+        <!-- Item 1 -->
+        <details class="group border-b overflow-hidden">
+          <summary
+            class="cursor-pointer p-4 text-xl flex justify-between items-center"
+          >
+            Material Selection and Specification
+            <span class="transition-transform group-open:rotate-180">&or;</span>
+          </summary>
+          <div class="p-4 text-gray-700">
+            his company assists clients in choosing the right materials,
+            finishes, and fixtures for their projects. Renovatio Interiors has
+            extensive knowledge of various materials, including flooring, wall
+            coverings, cabinetry, countertops, and lighting, and can guide
+            clients in selecting high-quality and aesthetically pleasing
+            options.
+          </div>
+        </details>
+
+        <!-- Item 2 -->
+        <details class="group border-b overflow-hidden">
+          <summary
+            class="cursor-pointer p-4 text-xl flex justify-between items-center"
+          >
+            Custom Furniture and Millwork
+            <span class="transition-transform group-open:rotate-180">&or;</span>
+          </summary>
+          <div class="p-4 text-gray-700">
+            Renovatio Interiors offers personalized consultations where clients
+            can seek professional advice on interior design decisions. They
+            provide recommendations on color schemes, furniture selection,
+            material choices, and overall aesthetics to help clients achieve
+            their desired look and feel.
+          </div>
+        </details>
+
+        <!-- Item 3 -->
+        <details class="group border-b overflow-hidden">
+          <summary
+            class="cursor-pointer p-4 text-xl flex justify-between items-center"
+          >
+            Lighting Design
+            <span class="transition-transform group-open:rotate-180">&or;</span>
+          </summary>
+          <div class="p-4 text-gray-700">
+            Renovatio Interiors excels in developing unique design concepts
+            tailored to each client's preferences. They create visual
+            representations of the proposed designs using 3D renderings, mood
+            boards, and sample boards, allowing clients to envision the final
+            outcome.
+          </div>
+        </details>
+      </div>
+      <div class="">
+        <img src="/Assets/Images/service-featured2.jpg" alt="" class="w-[300px] md:w-[600px] relative -top-30 slide" />
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section
+      class="w-full bg-white overflow-hidden px-4 sm:px-8 md:px-16 pt-1 pb-5"
+    >
+      <div
+        class="w-full max-w-7xl border-b border-gray-300 p-2 md:p-8 text-nowrap overflow-hidden"
+      >
+        <div>
+          <h2
+            class="headlineanimation text-3xl sm:text-4xl md:text-7xl xl:text-9xl"
+          >
+            Meet&nbsp;the&nbsp;Masters&nbsp;
+          </h2>
+          <h2
+            class="headlineanimation text-3xl sm:text-4xl md:text-7xl xl:text-9xl"
+          >
+            of&nbsp;Interior&nbsp;Design
+          </h2>
+        </div>
+      </div>
+
+      <!-- Subtitle -->
+      <div class="flex justify-between items-center text-2xl">
+        <h2
+          class="p-4 sm:p-6 text-xl sm:text-2xl md:text-3xl text-gray-600 fade-up"
+        >
+          One Team, Infinite Possibilities
+        </h2>
+      </div>
+    </section>
+
+    <section
+      class="w-full bg-white overflow-hidden px-4 sm:px-8 md:px-12 py-12"
+    >
+      <div
+        class="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-6"
+      >
+        <!-- Member 1 -->
+        <div class="overflow-hidden h-auto group relative">
+          <img
+            src="/Assets/Images/t-01.jpg"
+            alt="person"
+            class="w-[300px] xl:w-[400px] p-6"
+          />
+          <div
+            class="bg-white p-4 absolute bottom-[-100px] left-6 w-[250px] xl:w-[400px] group-hover:bottom-0 transition-all duration-300"
+          >
+            <h3 class="text-2xl font-normal">Alisson Taylor</h3>
+            <h4 class="jost">Team Manager</h4>
+          </div>
+        </div>
+
+        <!-- Member 2 -->
+        <div class="overflow-hidden h-auto group relative">
+          <img
+            src="/Assets/Images/t-03.jpg"
+            alt="person"
+            class="w-[300px] xl:w-[400px] p-6"
+          />
+          <div
+            class="bg-white p-4 absolute bottom-[-100px] left-6 w-[250px] xl:w-[400px] group-hover:bottom-0 transition-all duration-300"
+          >
+            <h3 class="text-2xl font-normal">Roger Craig</h3>
+            <h4 class="jost">CEO</h4>
+          </div>
+        </div>
+
+        <!-- Member 3 -->
+        <div class="overflow-hidden h-auto group relative">
+          <img
+            src="/Assets/Images/t-02.jpg"
+            alt="person"
+            class="w-[300px] xl:w-[400px] p-6"
+          />
+          <div
+            class="bg-white p-4 absolute bottom-[-100px] left-6 w-[250px] xl:w-[400px] group-hover:bottom-0 transition-all duration-300"
+          >
+            <h3 class="text-2xl font-normal">Allan Cooper</h3>
+            <h4 class="jost">CTO</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact us -->
+    <section
+      class="w-full bg-white overflow-hidden px-4 sm:px-8 md:px-16 pt-1 pb-5"
+    >
+      <div class="flex justify-end mb-4">
+        <button
+          class="p-2 hover:cursor-pointer flex items-center button fade-up"
+        >
+          <span
+            class="border-b p-1 transition-all duration-300 font-semibold text-xl jost"
+          >
+            Contact Us
+          </span>
+          <img
+            src="/Assets/Icons/right-up.png"
+            alt="arrow"
+            class="w-8 h-8 md:w-10 md:h-10 p-1 transition-all duration-300"
+          />
+        </button>
+      </div>
+
+      <!-- Headline -->
+      <div
+        class="w-full max-w-7xl border-b border-gray-300 p-2 md:p-8 text-nowrap overflow-hidden"
+      >
+        <div>
+          <h2
+            class="headlineanimation text-3xl sm:text-4xl md:text-7xl xl:text-9xl"
+          >
+            Get&nbsp;in&nbsp;Touch
+          </h2>
+        </div>
+      </div>
+
+      <!-- Subtitle -->
+      <div class="flex justify-between items-center text-2xl fade-up">
+        <h2 class="p-4 sm:p-6 text-xl sm:text-2xl md:text-3xl">
+          Building Relationships, One Conversation at a Time
+        </h2>
+      </div>
+    </section>
+
+    <!-- Contact banner -->
+    <section
+      class="w-full overflow-hidden relative min-h-[300px] sm:min-h-[400px] md:min-h-[500px]"
+    >
+      <!-- Text Content -->
+      <div
+        class="flex flex-col w-full justify-center items-center px-4 sm:px-6 md:px-8 py-12 mt-12 text-white text-center"
+      >
+        <h2 class="text-4xl/12 sm:text-5xl md:text-6xl lg:text-7xl p-4 fade-up">
+          Have a project in mind?
+        </h2>
+        <h3 class="p-2 sm:p-4 text-xl sm:text-2xl fade-up">
+          Do not hesitate to say Hello
+        </h3>
+
+        <!-- Button -->
+        <button
+          class="group flex border-2 border-white py-3 px-6 sm:py-4 sm:px-8 rounded-3xl text-lg sm:text-xl md:text-2xl mt-5 hover:bg-white hover:text-black transition-all duration-300"
+        >
+          <span class="mt-1">Let's Talk</span>
+          <img
+            src="/Assets/Icons/right-up.png"
+            alt="arrow"
+            class="w-8 h-8 sm:w-10 sm:h-10 p-1 ml-2 mt-1 transition-all duration-300 invert group-hover:invert-0 group-hover:translate-x-2"
+          />
+        </button>
+      </div>
+
+      <!-- Background Image -->
+      <img
+        src="/Assets/Images/stylish-compositon-modern-living-room-interior-with-frotte-armchair-sofa-plants-painting-wooden-commode-side-table-elegant-home-accessories-template-copy-spacexa.jpg"
+        alt="interior"
+        class="w-full h-full object-cover fixed bottom-0 z-[-1] brightness-70"
+      />
+    </section>
+
+    <section
+      class="bg-gray-900 text-white p-16 grid grid-cols-1 md:grid-cols-3 place-items-center gap-4"
+    >
+      <div>
+        <h2 class="text-2xl p-4">New york</h2>
+        <h4 class="pl-4 p-1 text-lg jost">+1 23 555-1234</h4>
+        <h4 class="pl-4 jost text-lg">info@renovatio.com</h4>
+      </div>
+      <div>
+        <h2 class="text-2xl p-4">Paris Office</h2>
+        <h4 class="pl-4 p-1 text-lg jost">+33 1 23 45 67 89</h4>
+        <h4 class="pl-4 jost text-lg">info@renovatio.com</h4>
+      </div>
+      <div>
+        <h2 class="text-2xl p-4">Berlin Office</h2>
+        <h4 class="pl-4 p-1 text-lg jost">+49 30 12345678</h4>
+        <h4 class="pl-4 jost text-lg">info@renovatio.com</h4>
+      </div>
+    </section>
+
+    <section class="bg-white w-full text-center p-8 jost">
+      ©2025 Amit Inc. - Bengaluru
+    </section>
+
+    <!-- swiper -->
+    <script src="/js/Swiper.js"></script>
+
+    <!-- GSAP -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+      integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+      integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="/js/Gsap.js"></script>
+    <script src="/js/scripts.js"></script>
+  </body>
+</html>

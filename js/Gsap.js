@@ -99,3 +99,14 @@ document.querySelectorAll('.fade-right').forEach(function(el) {
         },
     });
 });
+
+document.querySelectorAll('.slide').forEach(function(el) {
+    gsap.to(el , {
+        y:130,
+        scrollTrigger:{
+            scrub:1,
+            trigger: el,
+            start: "top 95%"
+        },
+    })
+})

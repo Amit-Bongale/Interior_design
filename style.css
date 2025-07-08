@@ -23,6 +23,10 @@ body{
   font-family: 'Tex', sans-serif;
 }
 
+h2 > span {
+  display: inline-block;
+}
+
 .imgeanimate {
   scale: 1.1;
   animation: image 8s linear infinite;

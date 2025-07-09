@@ -13,62 +13,61 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="bg-white">
+    <!-- NAVBAR -->
     <nav
-      class="flex justify-between items-center border-b text-white absolute top-0 w-full bg-transparent border-white backdrop-blur-md z-50 p-4"
+      class="absolute top-0 w-full z-50 bg-transparent backdrop-blur-md border-b border-white text-white"
     >
-      <!-- Logo -->
-      <div class="text-2xl font-bold tracking-wider">RENEVETE</div>
+      <div class="flex justify-between md:justify-around items-center px-4">
+        <!-- Logo -->
+        <div
+          class="text-xl lg:text-4xl font-bold tracking-wider md:border-r p-6"
+        >
+          RENEVETE
+        </div>
 
-      <!-- Hamburger Menu Icon -->
-      <div class="md:hidden">
-        <button id="menu-toggle" class="focus:outline-none">
+        <!-- Hamburger Icon (Mobile) -->
+        <button id="menu-toggle" class="md:hidden focus:outline-none">
           <svg
-            class="w-8 h-8"
+            class="w-6 h-6 text-white"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
             viewBox="0 0 24 24"
-            stroke-linecap="round"
-            stroke-linejoin="round"
           >
-            <path d="M4 6h16M4 12h16M4 18h16"></path>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
           </svg>
         </button>
+
+        <!-- Nav Items (Desktop) -->
+        <ul class="hidden md:flex space-x-6 list-none text-xl font-medium jost">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/about.html">About us</a></li>
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/project.html">Project</a></li>
+          <li><a href="/news.html">News</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
       </div>
 
-      <!-- Desktop Menu -->
-      <ul class="hidden md:flex space-x-6 text-lg font-medium jost">
+      <!-- Nav Items (Mobile Dropdown) -->
+      <ul
+        id="mobile-menu"
+        class="md:hidden hidden flex-col justify-center p-6 items-center space-y-4 mt-4 text-lg font-medium jost"
+      >
         <li><a href="/index.html">Home</a></li>
         <li><a href="/about.html">About us</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Project</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/project.html">Project</a></li>
         <li><a href="#">News</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="/contact.html">Contact</a></li>
       </ul>
     </nav>
 
-    <!-- Mobile Menu -->
-    <ul
-      id="mobile-menu"
-      class="md:hidden hidden flex-col text-black text-lg font-medium jost bg-white w-full px-6 py-4 space-y-4"
-    >
-      <li><a href="/index.html">Home</a></li>
-      <li><a href="/about.html">About us</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Project</a></li>
-      <li><a href="#">News</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-
-    <!-- Toggle Script -->
-    <script>
-      const toggleBtn = document.getElementById("menu-toggle");
-      const mobileMenu = document.getElementById("mobile-menu");
-
-      toggleBtn.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-    </script>
+    
 
     <section class="w-full h-screen relative overflow-hidden bg-white">
       <swiper-container
@@ -146,7 +145,7 @@
       <div class="absolute bottom-6 right-6 flex space-x-4 z-50">
         <button
           id="left-btn"
-          class="p-2 border border-black rounded-full bg-white hover:bg-black hover:invert transition"
+          class="p-2 border border-white rounded-full  hover:bg-black hover:invert transition"
         >
           <img
             src="/Assets/aboutpage/arrow (3).png"
@@ -156,7 +155,7 @@
         </button>
         <button
           id="right-btn"
-          class="p-2 border border-black rounded-full bg-white hover:bg-black hover:invert transition"
+          class="p-2 border border-white rounded-full  hover:bg-black hover:invert transition"
         >
           <img
             src="/Assets/aboutpage/arrow (2).png"
@@ -176,7 +175,7 @@
           <div class="text-center xl:text-left max-w-2xl">
             <h1
               data-aos="fade-left"
-              class="text-4xl sm:text-6xl xl:text-8xl text-teal-950 font-bold border-b border-teal-950 pb-2"
+              class="text-4xl sm:text-6xl xl:text-8xl text-teal-950  border-b border-teal-900 pb-4"
             >
               About Us
             </h1>
@@ -501,7 +500,7 @@
           <!-- Top Text Banner -->
           <span
             data-aos="fade-up"
-            class="border-t border-teal-950 inline-block w-full max-w-6xl pt-4 text-teal-950 font-bold text-xl sm:text-2xl md:text-3xl xl:text-4xl"
+            class="border-t border-teal-900 inline-block w-full max-w-6xl pt-4 text-teal-950  text-xl sm:text-2xl md:text-3xl xl:text-5xl"
           >
             "Discover Our Passion for Creating Timeless and Innovative Designs"
           </span>
@@ -617,7 +616,7 @@
         <div class="flex flex-col items-start">
           <h1
             data-aos="fade-left"
-            class="text-3xl sm:text-5xl xl:text-7xl font-bold text-teal-950 border-b border-teal-900 inline-block w-[90%] pb-4"
+            class="text-3xl sm:text-5xl xl:text-7xl font-bold text-teal-950 border-b border-teal-900 inline-block w-[80%] pb-4"
           >
             Meet the Minds Behind the Projects
           </h1>
@@ -634,48 +633,31 @@
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-10"
         >
           <!-- Member 1 -->
-          <div class="flex flex-col items-center overflow-hidden group">
-            <img
-              src="/Assets/aboutpage/persons/t-01.jpg"
-              alt="Roger Craig"
-              class="w-[250px] h-[300px] sm:w-[250px] sm:h-[300px] border rounded-full object-cover transition-transform duration-300 group-hover:scale-105"
-            />
-            <div
-              class="bg-white w-full text-center p-4 transition-all duration-300 relative group-hover:-translate-y-4"
-            >
-              <h3 class="text-xl font-semibold text-teal-950">Roger Craig</h3>
-              <h4 class="text-gray-600 jost">CEO</h4>
+<div class="flex flex-col justify-center items-center group h-130">
+            <img src="/Assets/aboutpage/persons/t-01.jpg" alt="" class="w-[70%] sm:w-[250px] sm:h-[300px] h-82 relative rounded-full ">
+            <div class="bg-white w-[70%] text-center p-4 relative bottom-0 group-hover:bottom-20 transition-all duration-300 ">
+              <h3 class="text-2xl font-normal">Jane Smith</h3>
+              <h4 class="jost">CEO</h4>
             </div>
           </div>
+          
 
           <!-- Member 2 -->
-          <div class="flex flex-col items-center overflow-hidden group sm:mt-10">
-            <img
-              src="/Assets/aboutpage/persons/t-02.jpg"
-              alt="Jane Smith"
-              class="w-[250px] h-[300px] sm:w-[250px] sm:h-[300px] border rounded-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
-            />
-            <div
-              class="bg-white w-full text-center p-4 transition-all duration-300 ease-in-out relative group-hover:-translate-y-4"
-            >
-              <h3 class="text-xl font-semibold text-teal-950">Jane Smith</h3>
-              <h4 class="text-gray-600 jost">Design Director</h4>
+          <div class="flex flex-col justify-center items-center group h-130 mt-10">
+            <img src="/Assets/aboutpage/persons/t-02.jpg" alt="" class="w-[70%] sm:w-[250px] sm:h-[300px] h-82 relative rounded-full ">
+            <div class="bg-white w-[70%] text-center p-4 relative bottom-0 group-hover:bottom-20 transition-all duration-300 ">
+              <h3 class="text-2xl font-normal">Jane Smith</h3>
+              <h4 class="jost">CEO</h4>
             </div>
-          </div>
+          </div>   
 
 
           <!-- Member 3 -->
-          <div class="flex flex-col items-center overflow-hidden group">
-            <img
-              src="/Assets/aboutpage/persons/t-03.jpg"
-              alt="Allan Cooper"
-              class="w-[250px] h-[300px] sm:w-[250px] sm:h-[300px] border rounded-full object-cover transition-transform duration-300 group-hover:scale-105"
-            />
-            <div
-              class="bg-white w-full text-center p-4 transition-all duration-300 relative group-hover:-translate-y-4"
-            >
-              <h3 class="text-xl font-semibold text-teal-950">Allan Cooper</h3>
-              <h4 class="text-gray-600 jost">Lead Architect</h4>
+          <div class="flex flex-col justify-center items-center group h-130">
+            <img src="/Assets/aboutpage/persons/t-03.jpg" alt="" class="w-[70%] sm:w-[250px] sm:h-[300px] h-82 relative rounded-full ">
+            <div class="bg-white w-[70%] text-center p-4 relative bottom-0 group-hover:bottom-20 transition-all duration-300 ">
+              <h3 class="text-2xl font-normal">Jane Smith</h3>
+              <h4 class="jost">CEO</h4>
             </div>
           </div>
         </div>

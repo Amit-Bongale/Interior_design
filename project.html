@@ -10,6 +10,10 @@
     <!-- swiper js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
+    <!-- aos -->
+ <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="bg-white">
@@ -109,34 +113,34 @@
 <section>
 
   <div class="flex justify-center items-center sm:mt-12 mt-10">
-    <h1 class="text-5xl sm:text-7xl">Projects</h1>
+    <h1 data-aos="fade-left" class="text-5xl sm:text-8xl font-semibold jost">Projects</h1>
   </div>
    
 
-<div class="grid sm:grid-cols-1 lg:grid-cols-3 grid-rows-2 gap-6 p-10 sm:mt-10 ">
-  <div class="flex flex-col justify-center p-2 items-center"><img src="Assets/project assets/project01.jpg" alt="" class="w-full h-auto object-cover rounded-xl" />
-  <h3 class="text-2xl">Modern Minimalism
+<div data-aos="zoom-in-up" class="grid sm:grid-cols-1 lg:grid-cols-3 grid-rows-2 gap-6 p-10 sm:mt-10 ">
+  <div class="flex flex-col justify-center p-2 items-center"><img src="Assets/project assets/project01.jpg" alt="" class="w-full h-auto object-cover rounded-xl transition-transform ease-in-out transform hover:scale-105" />
+  <h3 data-aos="zoom-in" class="text-2xl pt-4">Modern Minimalism
 </h3>
-<h4 class="jost">High Line</h4></div>
-  <div class="flex flex-col justify-center items-center p-2"><img src="Assets/project assets/project02.jpg" alt="" class="w-full h-auto object-cover rounded-xl" /><h3 class="text-2xl">Rustic Revival
+<h4 data-aos="zoom-in" class="jost">High Line</h4></div>
+  <div class="flex flex-col justify-center items-center p-2"><img src="Assets/project assets/project02.jpg" alt="" class="w-full h-auto object-cover rounded-xl transition-transform ease-in-out transform hover:scale-105" /><h3 data-aos="zoom-in" class="text-2xl pt-4">Rustic Revival
 </h3>
-<h4 class="jost">The Oaks</h4></div>
-  <div class="flex flex-col justify-center items-center p-2"><img src="Assets/project assets/project03.jpg" alt="" class="w-full h-auto object-cover rounded-xl"><h3 class="text-2xl">Modern Elegance
+<h4 data-aos="zoom-in" class="jost">The Oaks</h4></div>
+  <div class="flex flex-col justify-center items-center p-2"><img src="Assets/project assets/project03.jpg" alt="" class="w-full h-auto object-cover transition-transform ease-in-out duration-300 transform hover:scale-105 rounded-xl"><h3 data-aos="zoom-in" class="text-2xl pt-4">Modern Elegance
 
 </h3>
-<h4 class="jost">Sustainable Living</h4></div>
-  <div class="flex flex-col justify-center items-center p-2"><img src="Assets/project assets/project04.jpg" alt="" class="w-full h-auto object-cover rounded-xl"><h3 class="text-2xl">Bohemian Haven
+<h4 data-aos="zoom-in" class="jost">Sustainable Living</h4></div>
+  <div class="flex flex-col justify-center items-center p-2"><img src="Assets/project assets/project04.jpg" alt="" class="w-full h-auto object-cover rounded-xl transition-transform ease-in-out transform hover:scale-105"><h3 data-aos="zoom-in" class="text-2xl pt-4">Bohemian Haven
 
 </h3>
-<h4 class="jost">Modern house building.</h4></div>
-  <div class="flex flex-col justify-center items-center p-2"><img src="Assets/project assets/project05.jpg" alt="" class="w-full h-auto object-cover rounded-xl"><h3 class="text-2xl">Art Deco Extravaganza
+<h4 data-aos="zoom-in" class="jost">Modern house building.</h4></div>
+  <div class="flex flex-col justify-center items-center p-2"><img src="Assets/project assets/project05.jpg" alt="" class="w-full h-auto object-cover rounded-xl transition-transform ease-in-out transform hover:scale-105"><h3 data-aos="zoom-in" class="text-2xl pt-4">Art Deco Extravaganza
 
 </h3>
-<h4 class="jost">Marina Bay Sands</h4></div>
-  <div class="flex flex-col justify-center items-center p-2"><img src="Assets/project assets/project06.jpg" alt="" class="w-full h-auto object-cover rounded-xl"><h3 class="text-2xl">Tropical Paradise
+<h4 data-aos="zoom-in" class="jost">Marina Bay Sands</h4></div>
+  <div class="flex flex-col justify-center items-center p-2"><img src="Assets/project assets/project06.jpg" alt="" class="w-full h-auto object-cover rounded-xl transition-transform ease-in-out transform hover:scale-105"><h3 data-aos="zoom-in" class="text-2xl pt-4">Tropical Paradise
 
 </h3>
-<h4 class="jost">Modern Farmhouse</h4></div>
+<h4 data-aos="zoom-in" class="jost">Modern Farmhouse</h4></div>
 </div>
     </section>
 
@@ -147,6 +151,14 @@
       <h4 class="text-xl jost">©2025 Kartik Pvt. - New York</h4>
       </div>
     </section>
+
+
+    <script>
+      AOS.init({
+        duration:500,
+        easing:"ease-in-sine"
+      });
+    </script>
 
     </body>
     </html>

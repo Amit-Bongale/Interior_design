@@ -20,11 +20,10 @@
     >
       <div class="flex justify-between md:justify-around items-center px-4">
         <!-- Logo -->
-        <div
-          class="text-xl lg:text-4xl font-bold tracking-wider md:border-r p-6"
-        >
+        <a href="/index.html">
+          <div class="text-xl lg:text-4xl font-bold tracking-wider md:border-r p-6">
           RENEVETE
-        </div>
+        </div></a> 
 
         <!-- Hamburger Icon (Mobile) -->
         <button id="menu-toggle" class="md:hidden focus:outline-none">
@@ -207,33 +206,57 @@
         <h2 class="md:p-6 fade-up">
           Designing Interiors That Leave a Lasting Impression
         </h2>
-        <button
-          class="p-2 hover:cursor-pointer flex items-center button fade-up"
-        >
-          <span class="border-b p-1 transition-all duration-300"
-            >All Services</span
-          >
+        <a href="/services.html"> 
+          <button class="p-2 hover:cursor-pointer flex items-center button fade-up" >
+          <span class="border-b p-1 transition-all duration-300"> All Services</span>
           <img
             src="/Assets/Icons/right-up.png"
             alt="arrow"
             class="w-8 h-8 md:w-10 md:h-10 p-1 transition-all duration-300"
           />
-        </button>
+        </button> </a>
       </div>
 
       <!-- Services Grid -->
       <div
         class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-lg font-medium jost p-4 md:p-6 mt-10 fade-up"
       >
-        <span>Consultation</span>
-        <span>Space Planning</span>
-        <span>Concept Development</span>
-        <span>Design Development</span>
-        <span>3D Visualization</span>
-        <span>Project Management</span>
-        <span>Furniture Selection and Procurement</span>
-        <span>Lighting Design</span>
-        <span>Custom Design Elements</span>
+        <span class="flex items-center">
+          <img src="/Assets/Icons/add.png" alt="+" class="w-3  h-3 mb-1 mr-2">
+          <h4>Consultation</h4>
+        </span>
+        <span class="flex items-center">
+          <img src="/Assets/Icons/add.png" alt="+" class="w-3  h-3 mb-1 mr-2">
+          <h4>Space Planning</h4>
+        </span>
+        <span class="flex items-center">
+          <img src="/Assets/Icons/add.png" alt="+" class="w-3  h-3 mb-1 mr-2">
+          <span>Concept Development</span>
+        </span>
+        <span class="flex items-center">
+          <img src="/Assets/Icons/add.png" alt="+" class="w-3  h-3 mb-1 mr-2">
+          <span>Design Development</span>
+        </span>
+        <span class="flex items-center">
+          <img src="/Assets/Icons/add.png" alt="+" class="w-3  h-3 mb-1 mr-2">
+          <span>3D Visualization</span>
+        </span>
+        <span class="flex items-center">
+          <img src="/Assets/Icons/add.png" alt="+" class="w-3  h-3 mb-1 mr-2">
+          <span>Project Management</span>
+        </span>
+        <span class="flex items-center">
+          <img src="/Assets/Icons/add.png" alt="+" class="w-3  h-3 mb-1 mr-2">
+          <span>Furniture Selection and Procurement</span>
+        </span>
+        <span class="flex items-center">
+          <img src="/Assets/Icons/add.png" alt="+" class="w-3  h-3 mb-1 mr-2">
+          <span>Lighting Design</span>
+        </span>
+        <span class="flex items-center">
+          <img src="/Assets/Icons/add.png" alt="+" class="w-3  h-3 mb-1 mr-2">
+          <span>Custom Design Elements</span>
+        </span>
       </div>
 
       <!-- Stats -->
@@ -300,6 +323,7 @@
       <div class="w-full px-4 md:px-2 lg:px-12 mt-10">
         <!-- Button -->
         <div class="flex justify-end mb-4">
+          <a href="/about.html">
           <button
             class="p-2 hover:cursor-pointer flex items-center button fade-up"
           >
@@ -313,7 +337,7 @@
               alt="arrow"
               class="w-8 h-8 md:w-10 md:h-10 p-1 transition-all duration-300"
             />
-          </button>
+          </button> </a>
         </div>
 
         <div
@@ -416,10 +440,17 @@
 
     <!-- featured images -->
     <section class="w-full bg-white p-4 pb-12">
+      <div class="w-full relative top-40 md:top-50 lg:top-80 flex z-20 justify-between p-4 lg:p-10">
+        <button class="cursor-pointer">
+          <img src="/Assets/Icons/arrow.png" alt="left-arrow" class="w-6 md:w-10 rotate-180 invert" id="featured-swiper-left">
+        </button>
+        <button class="cursor-pointer">
+          <img src="/Assets/Icons/arrow.png" alt="right-arrow" class="w-6 md:w-10 invert" id="featured-swiper-right">
+        </button>
+      </div>
       <swiper-container
         speed="500"
         loop="true"
-        navigation="true"
         autoplay="true"
         autoplay-delay="3000"
         init="false"
@@ -579,110 +610,119 @@
         </h2>
       </div>
     </section>
+    
     <section
-      class="w-full bg-white overflow-hidden p-6 md:p-16 pt-2 overflow-hidden"
+      class="w-full bg-white overflow-hidden  pt-2 overflow-hidden"
     >
-      <swiper-container
-        slides-per-view="3"
-        speed="500"
-        loop="true"
-        navigation="true"
-        class="fade-up"
-        autoplay="true"
-        autoplay-delay="3000"
-        autoplay-disable-on-interaction="false"
-        id="news-swiper"
-      >
-        <swiper-slide class="p-2">
-          <img
-            src="/Assets/Images/room-interior-design.jpg"
-            alt=""
-            lazy="true"
-          />
-          <div>
-            <h2 class="jost p-2">May 18,2023 / News</h2>
-            <h2 class="text-2xl pt-0 p-2">
-              Biophilic Design: Connecting Nature and Interiors for Well-being
-            </h2>
-          </div>
-        </swiper-slide>
-        <swiper-slide class="p-2">
-          <img
-            src="/Assets/Images/stylish-dining-room-with-round-table-rattan-chair-wooden-commode-poster-kitchen-accessories-beige-wall-with-mock-up-poster-home-decor-template.jpg"
-            alt=""
-            srcset=""
-            class=""
-            lazy="true"
-          />
-          <div>
-            <h2 class="jost p-2">May 18,2023 / News</h2>
-            <h2 class="text-2xl pt-0 p-2">
-              Open Concept Living: Embracing Airy Interior Layouts
-            </h2>
-          </div>
-        </swiper-slide>
-        <swiper-slide class="p-2">
-          <img
-            src="/Assets/Images/stylish-composition-cozy-living-room-interior-with-copy-space-lot-plants-cacti-wooden-cubes-sofa-accessories-beige-wall-carpet-floor-plants-love-concept-template.jpg"
-            alt=""
-            class=""
-            srcset=""
-            lazy="true"
-          />
-          <div>
-            <h2 class="jost p-2">May 18,2023 / News</h2>
-            <h2 class="text-2xl pt-0 p-2">
-              Artistic Expressions: Incorporating Art into Interior Design
-            </h2>
-          </div>
-        </swiper-slide>
-        <swiper-slide class="p-2">
-          <img
-            src="/Assets/Images/stylish-composition-living-room-interior-with-beige-sofa-pillow-plaid-coffee-table-rattan-commode-personal-accessories-beige-wall-mock-up-poster-template.jpg"
-            alt=""
-            srcset=""
-            class=""
-            lazy="true"
-          />
-          <div>
-            <h2 class="jost p-2">May 18,2023 / News</h2>
-            <h2 class="text-2xl pt-0 p-2">
-              Multifunctional Furniture: Space-Saving Solutions for Compact
-              Homes
-            </h2>
-          </div>
-        </swiper-slide>
-        <swiper-slide class="p-2">
-          <img
-            src="/Assets/Images/stylish-compositon-modern-living-room-interior-with-frotte-armchair-sofa-plants-painting-wooden-commode-side-table-elegant-home-accessories-template-copy-spacexa.jpg"
-            alt=""
-            class=""
-            srcset=""
-            lazy="true"
-          />
-          <div>
-            <h2 class="jost p-2">May 18,2023 / News</h2>
-            <h2 class="text-2xl pt-0 p-2">
-              Artistic Expressions: Incorporating Art into Interior Design
-            </h2>
-          </div>
-        </swiper-slide>
-        <swiper-slide class="p-2">
-          <img
-            src="/Assets/Images/stylish-dining-room-with-round-table-rattan-chair-wooden-commode-poster-kitchen-accessories-beige-wall-with-mock-up-poster-home-decor-template (1).jpg"
-            alt=""
-            srcset=""
-            class=""
-            lazy="true"
-          />
-          <div>
-            <h2 class="jost p-2">May 18,2023 / News</h2>
-            <h2 class="text-2xl pt-0 p-2">
-              Emerging Trends: Exploring the Latest in Interior Design
-            </h2>
-          </div>
-        </swiper-slide>
-      </swiper-container>
+      <div class="w-full relative top-35 md:top-60 lg:top-80 flex z-20 justify-between p-4 lg:p-10">
+        <button class="cursor-pointer">
+          <img src="/Assets/Icons/arrow.png" alt="left-arrow" class="w-4 md:w-9 rotate-180" id="news-swiper-left">
+        </button>
+        <button class="cursor-pointer">
+          <img src="/Assets/Icons/arrow.png" alt="right-arrow" class="w-4 md:w-9" id="news-swiper-right">
+        </button>
+      </div>
+
+      <div class="p-6 md:p-26">
+        <swiper-container
+          slides-per-view="3"
+          speed="500"
+          class="fade-up"
+          id="news-swiper"
+          init="false"
+          grab-cursor="true"
+        >
+          <swiper-slide class="p-2">
+            <img
+              src="/Assets/Images/room-interior-design.jpg"
+              alt=""
+              lazy="true"
+            />
+            <div>
+              <h2 class="jost p-2">May 18,2023 / News</h2>
+              <h2 class="text-2xl pt-0 p-2">
+                Biophilic Design: Connecting Nature and Interiors for Well-being
+              </h2>
+            </div>
+          </swiper-slide>
+          <swiper-slide class="p-2">
+            <img
+              src="/Assets/Images/stylish-dining-room-with-round-table-rattan-chair-wooden-commode-poster-kitchen-accessories-beige-wall-with-mock-up-poster-home-decor-template.jpg"
+              alt=""
+              srcset=""
+              class=""
+              lazy="true"
+            />
+            <div>
+              <h2 class="jost p-2">May 18,2023 / News</h2>
+              <h2 class="text-2xl pt-0 p-2">
+                Open Concept Living: Embracing Airy Interior Layouts
+              </h2>
+            </div>
+          </swiper-slide>
+          <swiper-slide class="p-2">
+            <img
+              src="/Assets/Images/stylish-composition-cozy-living-room-interior-with-copy-space-lot-plants-cacti-wooden-cubes-sofa-accessories-beige-wall-carpet-floor-plants-love-concept-template.jpg"
+              alt=""
+              class=""
+              srcset=""
+              lazy="true"
+            />
+            <div>
+              <h2 class="jost p-2">May 18,2023 / News</h2>
+              <h2 class="text-2xl pt-0 p-2">
+                Artistic Expressions: Incorporating Art into Interior Design
+              </h2>
+            </div>
+          </swiper-slide>
+          <swiper-slide class="p-2">
+            <img
+              src="/Assets/Images/stylish-composition-living-room-interior-with-beige-sofa-pillow-plaid-coffee-table-rattan-commode-personal-accessories-beige-wall-mock-up-poster-template.jpg"
+              alt=""
+              srcset=""
+              class=""
+              lazy="true"
+            />
+            <div>
+              <h2 class="jost p-2">May 18,2023 / News</h2>
+              <h2 class="text-2xl pt-0 p-2">
+                Multifunctional Furniture: Space-Saving Solutions for Compact
+                Homes
+              </h2>
+            </div>
+          </swiper-slide>
+          <swiper-slide class="p-2">
+            <img
+              src="/Assets/Images/stylish-compositon-modern-living-room-interior-with-frotte-armchair-sofa-plants-painting-wooden-commode-side-table-elegant-home-accessories-template-copy-spacexa.jpg"
+              alt=""
+              class=""
+              srcset=""
+              lazy="true"
+            />
+            <div>
+              <h2 class="jost p-2">May 18,2023 / News</h2>
+              <h2 class="text-2xl pt-0 p-2">
+                Artistic Expressions: Incorporating Art into Interior Design
+              </h2>
+            </div>
+          </swiper-slide>
+          <swiper-slide class="p-2">
+            <img
+              src="/Assets/Images/stylish-dining-room-with-round-table-rattan-chair-wooden-commode-poster-kitchen-accessories-beige-wall-with-mock-up-poster-home-decor-template (1).jpg"
+              alt=""
+              srcset=""
+              class=""
+              lazy="true"
+            />
+            <div>
+              <h2 class="jost p-2">May 18,2023 / News</h2>
+              <h2 class="text-2xl pt-0 p-2">
+                Emerging Trends: Exploring the Latest in Interior Design
+              </h2>
+            </div>
+          </swiper-slide>
+        </swiper-container>
+      </div>
     </section>
 
     <!-- Team -->
@@ -715,7 +755,6 @@
         </h2>
       </div>
     </section>
-
     <section
       class="w-full bg-white overflow-hidden px-4 sm:px-8 md:px-12 py-12"
     >
@@ -774,6 +813,7 @@
       class="w-full bg-white overflow-hidden px-4 sm:px-8 md:px-16 pt-1 pb-5"
     >
       <div class="flex justify-end mb-4">
+        <a href="/contact.html">
         <button
           class="p-2 hover:cursor-pointer flex items-center button fade-up"
         >
@@ -787,7 +827,7 @@
             alt="arrow"
             class="w-8 h-8 md:w-10 md:h-10 p-1 transition-all duration-300"
           />
-        </button>
+        </button> </a>
       </div>
 
       <!-- Headline -->
@@ -827,6 +867,7 @@
         </h3>
 
         <!-- Button -->
+         <a href="/contact.html">
         <button
           class="group flex border-2 border-white py-3 px-6 sm:py-4 sm:px-8 rounded-3xl text-lg sm:text-xl md:text-2xl mt-5 hover:bg-white hover:text-black transition-all duration-300"
         >
@@ -836,7 +877,7 @@
             alt="arrow"
             class="w-8 h-8 sm:w-10 sm:h-10 p-1 ml-2 mt-1 transition-all duration-300 invert group-hover:invert-0 group-hover:translate-x-2"
           />
-        </button>
+        </button> </a>
       </div>
 
       <!-- Background Image -->
@@ -847,6 +888,7 @@
       />
     </section>
 
+    <!-- office -->
     <section
       class="bg-gray-900 text-white p-16 grid grid-cols-1 md:grid-cols-3 place-items-center gap-4"
     >
@@ -865,8 +907,10 @@
         <h4 class="pl-4 p-1 text-lg jost">+49 30 12345678</h4>
         <h4 class="pl-4 jost text-lg">info@renovatio.com</h4>
       </div>
+     
     </section>
 
+    <!-- footer -->
     <section class="bg-white w-full text-center p-8 jost">
       ©2025 Amit Inc. - Bengaluru
     </section>

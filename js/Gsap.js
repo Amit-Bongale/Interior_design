@@ -8,7 +8,6 @@ function headlineAnimation(){
             content += `<span>${element}</span>`;
         });
         Headline.innerHTML = content;
-        console.log(content)
 
         gsap.from(Headline.querySelectorAll("span"), {
             x:50,

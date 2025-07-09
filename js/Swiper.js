@@ -3,12 +3,39 @@ const Forwardbutton = document.querySelector('#forword-btn');
 const Backwardbutton = document.querySelector('#backword-btn')
 
 Forwardbutton.addEventListener('click', () => {
-    swiperEl.swiper.slideNext();
+  swiperEl.swiper.slidePrev();
 });
 
 Backwardbutton.addEventListener('click', () => {
-    swiperEl.swiper.slidePrev();
+  swiperEl.swiper.slideNext();
 });
+
+
+const featuredswiperEl = document.querySelector('#featured-swiper');
+const featuredForwardbutton = document.querySelector('#featured-swiper-left');
+const featuredBackwardbutton = document.querySelector('#featured-swiper-right')
+
+featuredForwardbutton.addEventListener('click', () => {
+  featuredswiperEl.swiper.slidePrev();
+});
+
+featuredBackwardbutton.addEventListener('click', () => {
+  featuredswiperEl.swiper.slideNext();
+});
+
+
+const newsswiperEl = document.querySelector('#news-swiper');
+const newsForwardbutton = document.querySelector('#news-swiper-left');
+const newsBackwardbutton = document.querySelector('#news-swiper-right')
+
+newsForwardbutton.addEventListener('click', () => {
+  newsswiperEl.swiper.slidePrev();
+});
+
+newsBackwardbutton.addEventListener('click', () => {
+  newsswiperEl.swiper.slideNext();
+});
+
 
 
 // breakpoints
@@ -18,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
   Object.assign(swiperEl, {
     slidesPerView: 2, // default for desktop
     loop: true,
-    navigation: true,
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,
@@ -45,7 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
   Object.assign(swiperEl, {
     slidesPerView: 3, // default for desktop
     loop: true,
-    navigation: true,
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,
@@ -57,6 +82,9 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       // screen width > 640px
       640: {
+        slidesPerView: 2
+      },
+      900: {
         slidesPerView: 3
       }
     }

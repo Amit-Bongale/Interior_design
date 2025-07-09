@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+
+        <!-- tailwind css-->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav
+      class="absolute top-0 w-full z-99 bg-white backdrop-blur-md border-b border-black text-black"
+    >
+      <div class="flex justify-between md:justify-around items-center px-4">
+        <!-- Logo -->
+        <a href="/index.html"><div
+          class="text-xl lg:text-4xl font-bold tracking-wider md:border-r p-6"
+        >
+          RENEVETE
+        </div></a>
+
+        <!-- Hamburger Icon (Mobile) -->
+        <button id="menu-toggle" class="md:hidden focus:outline-none">
+          <svg
+            class="w-6 h-6 text-black"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+
+        <!-- Nav Items (Desktop) -->
+        <ul class="hidden md:flex space-x-6 list-none text-xl jost">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/about.html">About us</a></li>
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="#">Project</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Nav Items (Mobile Dropdown) -->
+      <ul
+        id="mobile-menu"
+        class="md:hidden hidden flex-col justify-center p-6 items-center space-y-4 mt-4 text-lg jost"
+      >
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About us</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="#">Project</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section>
+        
+        <div class="w-full text-white absolute text-center p-6 md:p-26 z-20 top-20">
+            <button class="jost border border-white rounded-full py-1 px-4 text-sm md:text-xl m-4"> news</button>
+            <h1 class="text-4xl md:text:6xl lg:text-8xl text-wrap">Open Concept Living: Embracing Airy Interior Layouts </h1>
+        </div>
+
+        <img src="/Assets/Images/stylish-composition-cozy-living-room-interior-with-copy-space-lot-plants-cacti-wooden-cubes-sofa-accessories-beige-wall-carpet-floor-plants-love-concept-template.jpg" alt="bg" class="w-full h-100 sm:h-80 lg:h-150 object-cover brightness-60">
+    </section>
+
+
+    <section class="p-4 md:p-10 lg:p-24">
+
+        <div>
+            <h3 class="jost text-gray-900 text-sm md:text-xl p-2 md:p-6">Modern architecture emphasizes sustainable design principles, including energy-efficient building materials, renewable energy sources, and green roofs. Architects also consider the environmental impact of the building's construction and operation, ensuring a minimal carbon footprint.</h3>
+
+            <h2 class="p-2 mt-6 md:pt-6 md:pl-6 text-xl md:text-4xl">Sustainable Design</h2>
+            <h3 class="jost text-gray-900 text-sm md:text-xl p-2 md:pl-6 md:pb-6">Modern architecture often features a minimalistic and clean design aesthetic, focusing on simplicity, functionality, and ample natural light. This approach enhances the building’s energy efficiency, reduces visual clutter, and creates a more visually appealing experience.</h3>
+
+            <img src="/Assets/Images/living-room-interior-loft-style-with-yellow-armchair-empty-wooden-wall-background-1536x864.jpg" alt="" class="w-full p-2 md:p-6">
+        </div>
+
+        <div>
+            <h2 class="p-2 md:pt-6 md:pl-6 text-xl md:text-4xl">Minimalistic Aesthetic</h2>
+            <h3 class="jost text-gray-900 text-sm md:text-xl p-2 md:pl-6 md:pb-6">Modern architecture often features a minimalistic and clean design aesthetic, focusing on simplicity, functionality, and ample natural light. This approach enhances the building’s energy efficiency, reduces visual clutter, and creates a more visually appealing experience.</h3>
+
+            <h2 class="p-2 mt-6 md:pt-6 md:pl-6 text-xl md:text-4xl" >Integration of Passive Design Strategies</h2>
+            <h3 class="jost text-gray-900 text-sm md:text-xl p-2 pb-4 md:pl-6 md:pb-6">Passive design strategies focus on optimizing the building's orientation, insulation, ventilation, and shading to reduce reliance on mechanical systems for heating, cooling, and lighting. Modern architecture incorporates passive design principles to enhance energy efficiency and occupant comfort.</h3>
+
+            <img src="/Assets/Images/living-room-with-design-chaise-longue-painting-rattan-decoration-wooden-cube-carpet-elegant-personal-accessories-1-1300x1280.jpg" alt="" class="w-full ">
+
+            <h3 class="jost text-gray-900 text-sm md:text-xl p-2 md:p-6">By incorporating these modern architectural principles, your architectural project can deliver a sustainable, functional, and aesthetically pleasing structure that enhances the occupant’s well-being and minimizes the building's environmental impact.</h3>
+        </div>
+
+        <h3 class="jost text-gray-900 text-xl p-2 md:pl-6 "> Share this</h3>
+        <div class="flex gap-4 p-2 md:pl-6">
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourwebsite.com/news/post-slug" target="_blank" class="text-blue-600 hover:scale-110 transition">
+                <img src="/Assets/Icons/facebook (1).png" alt="Share on Facebook" class="w-6 h-6">
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/?text=https://yourwebsite.com/news/post-slug" target="_blank" class="text-green-500 hover:scale-110 transition">
+                <img src="/Assets/Icons/whatsapp.png" alt="Share on WhatsApp" class="w-6 h-6">
+            </a>
+
+            <!-- X (Twitter) -->
+            <a href="https://twitter.com/intent/tweet?url=https://yourwebsite.com/news/post-slug&text=Check%20this%20out!" target="_blank" class="text-black hover:scale-110 transition">
+                <img src="/Assets/Icons/twitter.png" alt="Share on Twitter" class="w-6 h-6">
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://yourwebsite.com/news/post-slug" target="_blank" class="text-blue-700 hover:scale-110 transition">
+                <img src="/Assets/Icons/linkedin.png" alt="Share on LinkedIn" class="w-6 h-6">
+            </a>
+        </div>
+    </section>
+
+    <section class="p-2 md:p-8 w-full">
+        <h3 class="text-sm md:text-xl border-b p-2 w-fit">You May Also Like</h3>
+        <div class="flex gap-4 justify-around p-6 flex-wrap">
+            <div>
+                <div class="relative top-5 md:top-15">
+                    <div class="absolute z-5 text-white p-6 text-wrap text-center ">
+                        <h2 class="text-xl lg:text-3xl/10 text-wrap ">Global Design Inspirations: Exploring Cultural Influences in Interiors</h2>
+                        <button class="border border-white px-3 py-2 m-4 jost text-sm font-semibold hover:bg-white hover:text-black hover:border-none transition-all duration-200 cursor-pointer">VIEW POST   </button>
+                    </div>
+                </div>
+                <img src="/Assets/Images/stylish-boho-vintage-dining-room-interior-with-poster-mock-up-round-table-with-rattan-chair-vase-with-dried-flowers-brown-wall-rattan-lamp-mock-up-poster-template-1300x1300.jpg" alt="" class="w-100 brightness-50">
+            </div>
+            <div>
+                <div class="relative top-5 md:top-15">
+                    <div class="absolute z-5 text-white p-6 text-wrap text-center ">
+                        <h2 class="text-xl lg:text-3xl/10 text-wrap ">Multifunctional Furniture: Space Saving Solutions for Compact Homes</h2>
+                        <button class="border border-white px-3 py-2 m-4 jost text-sm font-semibold hover:bg-white hover:text-black hover:border-none transition-all duration-200 cursor-pointer">VIEW POST </button>
+                    </div>
+                </div>
+                <img src="/Assets/Images/living-room-with-design-chaise-longue-painting-rattan-decoration-wooden-cube-carpet-elegant-personal-accessories-1-1300x1280.jpg" alt="" class="w-100 brightness-50">
+            </div>
+            <div>
+                <div class="relative top-5 md:top-15">
+                    <div class="absolute z-5 text-white p-6 text-wrap text-center ">
+                        <h2 class="text-xl lg:text-3xl/10 text-wrap ">Artistic Expressions: Incorporating Art into Interior Design</h2>
+                        <button class="border border-white px-3 py-2 m-4 jost text-sm font-semibold hover:bg-white hover:text-black hover:border-none transition-all duration-200 cursor-pointer">VIEW POST   </button>
+                    </div>
+                </div>
+                <img src="/Assets/Images/festive-christmas-modern-kitchen-with-big-tree-1300x1280.jpg" alt="" class="w-100 brightness-50">
+            </div>
+        </div>
+    </section>
+
+    <section class="p-2 md:p-6 w-full flex justify-center items-center">
+        <div class="border-2 md:w-1/2 p-1 md:p-4">
+            <h3 class="jost p-6">LEAVE A COMMENT</h3>
+
+            <form action="">
+                <div class="flex flex-col px-2 md:px-6">
+                    <label for="comment" class="m-2 jost">COMMENT *</label>
+                    <textarea rows="10" id="comment" class="border-1 border-gray-300"></textarea>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3">
+                    <div class="p-2 md:p-6">
+                        <label for="comment" class="m-2 jost py-2">Name *</label>
+                        <input type="text" class="border-1 border-gray-300 py-1">
+                    </div>
+                    <div class="p-2 md:p-6">
+                        <label for="comment" class="m-2 jost py-2">EMAIL *</label>
+                        <input type="email" class="border-1 border-gray-300 py-1">
+                    </div>
+                    <div class="p-2 md:p-6">
+                        <label for="comment" class="m-2 jost py-2">Mobile*</label>
+                        <input type="text" class="border-1 border-gray-300 py-1">
+                    </div>
+                </div>
+                <div class="p-2 py-4 md:p-6">
+                    <button class="border-2 px-6 py-3 jost font-medium text-sm">POST COMMENT</button>
+                </div>
+            </form>
+        </div>
+
+    </section>
+
+
+
+    <!-- footer -->
+    <section class="bg-white w-full text-center p-8 jost">
+      ©2025 Amit Inc. - Bengaluru
+    </section>
+
+
+    <!-- swiper -->
+    <script src="/js/Swiper.js"></script>
+
+    <!-- GSAP -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+      integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+      integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="/js/Gsap.js"></script>
+    <script src="/js/scripts.js"></script>
+
+</body>
+</html>

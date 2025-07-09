@@ -9,6 +9,10 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- swiper js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+<!-- aos -->
+ <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -18,11 +22,13 @@
     >
       <div class="flex justify-between md:justify-around items-center px-4">
         <!-- Logo -->
-        <a href="/index.html"><div
-          class="text-xl lg:text-4xl font-bold tracking-wider md:border-r p-6"
+        <a href="/index.html"
+          ><div
+            class="text-xl lg:text-4xl font-bold tracking-wider md:border-r p-6"
+          >
+            RENEVETE
+          </div></a
         >
-          RENEVETE
-        </div></a>
 
         <!-- Hamburger Icon (Mobile) -->
         <button id="menu-toggle" class="md:hidden focus:outline-none">
@@ -106,11 +112,286 @@
       </swiper-container>
     </section>
 
+   
 
+    <section class="overflow-hidden">
+      <div class="flex justify-center items-center mt-10">
+        <h1 data-aos="fade-left" class="text-6xl">News</h1>
+      </div>
 
+      <div class="p-4 sm:p-6 md:p-10">
+        <div
+          data-aos="zoom-in-up" class="grid sm:grid-cols-1 lg:grid-cols-3 grid-rows-2 space-x-6 p-10"
+        >
+          <!-- image1 -->
+          <div class="sm:row-span-2">
+            <img
+              src="/Assets/news assets/news1.jpg"
+              alt=""
+              class="rounded-xl w-full shadow-lg cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105"
+            />
+            <div class="flex flex-col items-start w-[70%] ml-10">
+              <h3 class="text-xl pt-4">Biophilic Design: </h3>
+              <h3 class="text-xl"> Connecting Nature and Interiors for Well-being</h3>
+            </div>
 
+            <div
+              class="flex justify-center flex-wrap items-center gap-x-4 gap-y-2 mt-4 text-sm sm:text-base"
+            >
+              <h4 class="mr-4 sm:w-15 w-10 jost border rounded-xl text-center">
+                news
+              </h4>
+              <img
+                src="/Assets/news assets/calendar.png"
+                alt=""
+                class="sm:w-5 sm:h-5 h-4 w-4"
+              />
+              <h4 class="jost">July 10, 2025</h4>
+              <img
+                src="/Assets/news assets/share.png"
+                alt=""
+                class="sm:w-5 sm:h-5 w-4 h-4"
+              />
+              <h4 class="jost">Share</h4>
+            </div>
 
+            <div class="flex flex-col ml-15">
+              <span class="p-4">...</span>
+              <h3
+                class="underline font-medium hover:underline-offset-4 cursor-pointer"
+              >
+                Read more
+              </h3>
+            </div>
+          </div>
 
-    
-</body>
+          <!-- image2 -->
+          <div class="sm:col-start-2 sm:row-start-1 sm:row-span-3">
+            <img
+              src="/Assets/news assets/news2.jpg"
+              alt=""
+              class="rounded-xl w-full shadow-lg cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 "
+            />
+
+            <div class="flex flex-col items-start w-[70%] ml-10">
+              <h3 class="text-xl pt-4">Artistic Expressions:</h3>
+              <h3 class="text-xl">Incorporating Art into Interior Design</h3>
+            </div>
+
+            <div
+              class="flex justify-center items-center mt-4 gap-x-4 gap-y-2 text-sm sm:text-base"
+            >
+              <h4 class="mr-4 sm:w-15 w-10 jost border rounded-xl text-center">
+                news
+              </h4>
+              <img
+                src="/Assets/news assets/calendar.png"
+                alt=""
+                class="sm:w-5 sm:h-5 w-4 h-4"
+              />
+              <h4 class="jost">July 10, 2025</h4>
+              <img
+                src="/Assets/news assets/share.png"
+                alt=""
+                class="sm:w-5 sm:h-5 w-4 h-4"
+              />
+              <h4 class="jost">Share</h4>
+            </div>
+
+            <div class="flex flex-col ml-15">
+              <span class="p-4">...</span>
+              <h3
+                class="underline font-medium hover:underline-offset-4 cursor-pointer pb-6"
+              >
+                Read more
+              </h3>
+            </div>
+          </div>
+
+          <!-- image3 -->
+          <div class="sm:col-start-3 sm:row-start-1 sm:row-span-3">
+            <img
+              src="/Assets/news assets/news3.jpg"
+              alt=""
+              class="rounded-xl w-full shadow-lg cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105"
+            />
+
+            <div class="flex flex-col items-start w-[70%] ml-10">
+              <h3 class="text-xl pt-4">Multifunctional Furniture: </h3>
+              <h3 class="text-xl">Space-Saving Solutions for Compact Homes</h3>
+            </div>
+
+            <div
+              class="flex justify-center items-center mt-4 gap-x-4 gap-y-2 text-sm sm:text-base"
+            >
+              <h4 class="mr-4 sm:w-15 w-10 jost border rounded-xl text-center">
+                news
+              </h4>
+              <img
+                src="/Assets/news assets/calendar.png"
+                alt=""
+                class="sm:w-5 sm:h-5 w-4 h-4"
+              />
+              <h4 class="jost">July 10, 2025</h4>
+              <img
+                src="/Assets/news assets/share.png"
+                alt=""
+                class="sm:w-5 sm:h-5 w-4 h-4"
+              />
+              <h4 class="jost">Share</h4>
+            </div>
+
+            <div class="flex flex-col ml-15">
+              <span class="p-4">...</span>
+              <h3
+                class="underline font-medium hover:underline-offset-4 cursor-pointer pb-6"
+              >
+                Read more
+              </h3>
+            </div>
+          </div>
+
+          <!-- image4 -->
+          <div class="sm:row-start-3 sm:col-start-1 sm:row-span-2 sm:pt-16">
+            <img
+              src="/Assets/news assets/news4.jpg"
+              alt=""
+              class="w-full rounded-xl shadow-lg cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105"
+            />
+
+            <div class="flex flex-col items-start w-[70%] ml-10">
+              <h3 class="text-xl pt-4">Open Concept Living:</h3>
+              <h3 class="text-xl"> Embracing Airy Interior Layouts</h3>
+            </div>
+
+            <div
+              class="flex justify-center items-center mt-4 gap-x-4 gap-y-2 text-sm sm:text-base"
+            >
+              <h4 class="mr-4 sm:w-15 w-10 jost border rounded-xl text-center">
+                news
+              </h4>
+              <img
+                src="/Assets/news assets/calendar.png"
+                alt=""
+                class="sm:w-5 sm:h-5 w-4 h-4"
+              />
+              <h4 class="jost">July 10, 2025</h4>
+              <img
+                src="/Assets/news assets/share.png"
+                alt=""
+                class="sm:w-5 sm:h-5 w-4 h-4"
+              />
+              <h4 class="jost">Share</h4>
+            </div>
+
+            <div class="flex flex-col ml-15">
+              <span class="p-4">...</span>
+              <h3
+                class="underline font-medium hover:underline-offset-4 cursor-pointer pb-6"
+              >
+                Read more
+              </h3>
+            </div>
+          </div>
+
+          <!-- image5 -->
+          <div class="sm:col-start-2 sm:row-start-3 sm:row-span-3 sm:mt-[45%]">
+            <img
+              src="/Assets/news assets/news5.jpg"
+              alt=""
+              class="rounded-xl w-full shadow-lg cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105"
+            />
+            <div class="flex flex-col items-start w-[70%] ml-10">
+              <h3 class="text-xl pt-4">Global Design Inspirations: </h3>
+              <h3 class="text-xl">Exploring Cultural Influences in Interiors</h3>
+            </div>
+
+            <div
+              class="flex justify-center items-center mt-4 gap-x-4 gap-y-2 text-sm sm:text-base"
+            >
+              <h4 class="mr-4 sm:w-15 w-10 jost border rounded-xl text-center">
+                news
+              </h4>
+              <img
+                src="/Assets/news assets/calendar.png"
+                alt=""
+                class="sm:w-5 sm:h-5 w-4 h-4"
+              />
+              <h4 class="jost">July 10, 2025</h4>
+              <img
+                src="/Assets/news assets/share.png"
+                alt=""
+                class="sm:w-5 sm:h-5 w-4 h-4"
+              />
+              <h4 class="jost">Share</h4>
+            </div>
+
+            <div class="flex flex-col ml-15">
+              <span class="p-4">...</span>
+              <h3
+                class="underline font-medium hover:underline-offset-4 cursor-pointer pb-6"
+              >
+                Read more
+              </h3>
+            </div>
+          </div>
+
+          <!-- image6 -->
+          <div class="sm:col-start-3 sm:row-start-3 sm:row-span-3 sm:mt-[45%]">
+            <img
+              src="/Assets/news assets/news6.jpg"
+              alt=""
+              class="rounded-xl w-full shadow-lg cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105"
+            />
+            <div class="flex flex-col items-start w-[70%] ml-10">
+              <h3 class="text-xl pt-4">Emerging Trends: </h3>
+              <h3 class="text-xl">Exploring the Latest in Interior Design</h3>
+            </div>
+
+            <div
+              class="flex justify-center items-center mt-4 gap-x-4 gap-y-2 text-sm sm:text-base"
+            >
+              <h4 class="mr-4 sm:w-15 w-10 jost border rounded-xl text-center">
+                news
+              </h4>
+              <img
+                src="/Assets/news assets/calendar.png"
+                alt=""
+                class="sm:w-5 sm:h-5 w-4 h-4"
+              />
+              <h4 class="jost">July 10, 2025</h4>
+              <img
+                src="/Assets/news assets/share.png"
+                alt=""
+                class="sm:w-5 sm:h-5 w-4 h-4"
+              />
+              <h4 class="jost">Share</h4>
+            </div>
+
+            <div class="flex flex-col ml-15">
+              <span class="p-4">...</span>
+              <h3
+                class="underline font-medium hover:underline-offset-4 cursor-pointer "
+              >
+                Read more
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="flex justify-center items-center mt-20 pb-4">
+        <h4 class="text-xl jost ">©2025 Kartik Pvt. - New York</h4>
+      </div>
+    </section>
+
+    <script>
+      AOS.init({
+        duration:500,
+        easing:"ease-in-sine"
+      });
+    </script>
+  </body>
 </html>

@@ -109,3 +109,52 @@ document.querySelectorAll('.slide').forEach(function(el) {
         },
     })
 })
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  let mm = gsap.matchMedia();
+
+  // Only run on md and above
+  mm.add("(min-width: 768px)", () => {
+    // Animate headline
+    gsap.from(".headlineanimation", {
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".headlineanimation",
+        start: "top 80%",
+        toggleActions: "play none none reverse"
+      }
+    });
+
+    // Slide effect for each element with .slide
+    document.querySelectorAll(".about-slide").forEach((el) => {
+      gsap.to(el, {
+        y: 130,
+        scrollTrigger: {
+          scrub: 1,
+          trigger: el,
+          start: "top 95%"
+        }
+      });
+    });
+  });
+
+  // Optional: small screen animations
+  mm.add("(max-width: 768px)", () => {
+    gsap.from(".headlineanimation", {
+      opacity: 0,
+      duration: 0.6
+    });
+    // Skip .slide animation for mobile
+  });
+});
+
+
+
+
+

@@ -13,7 +13,7 @@ forwardBtn.addEventListener('click', () => {
 });
 
 
-const swiper=document.querySelector('#swipe-head');
+const swiper=document.querySelector('#about-swiper');
 const leftArrow= document.querySelector('#left-button');
 const rightArrow=document.querySelector('#right-button');
 

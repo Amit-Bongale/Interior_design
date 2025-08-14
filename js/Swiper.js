@@ -92,3 +92,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
   swiperEl.initialize();
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const swiperE2 = document.querySelector('#about-swiper');
+
+  Object.assign(swiperE2, {
+    slidesPerView: 3, // default for desktop
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      // screen width <= 640px
+      0: {
+        slidesPerView: 1
+      },
+      // screen width > 640px
+      640: {
+        slidesPerView: 2
+      },
+      900: {
+        slidesPerView: 3
+      }
+    }
+  });
+
+  swiperE2.initialize();
+});
